@@ -154,8 +154,8 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
         left: 'center',
         bottom: '0%',
         inRange: {
-          // Light slate -> light indigo -> indigo -> navy gradient suitable for white text
-          color: ['#f8fafc', '#a5b4fc', '#6366f1', '#4f46e5', '#3730a3', '#1e1b4b']
+          // Forest Teal & Emerald gradient
+          color: ['#f8fafc', '#ccfbf1', '#2dd4bf', '#0d9488', '#0f766e', '#115e59', '#134e4a']
         },
         textStyle: { color: '#475569', fontSize: 10 },
         formatter: (value: number) => {
@@ -173,7 +173,7 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
             fontSize: 8,
             color: (params: any) => {
               const val = params.value[3] || 0;
-              return val <= 2 ? '#334155' : '#ffffff'; // dark text for light blue cells, white for dark indigo/navy cells
+              return val <= 2 ? '#115e59' : '#ffffff'; // dark teal for light mint cells, white for dark forest/teal cells
             },
             formatter: (params: any) => params.value[3] || '' // display raw call count inside cell
           },
