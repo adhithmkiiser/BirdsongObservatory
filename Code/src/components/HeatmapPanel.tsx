@@ -235,17 +235,23 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
           </select>
         </div>
 
-        <div className="filter-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-          <input
-            type="checkbox"
-            id="heatmap-log-scale"
-            checked={useLogScale}
-            onChange={(e) => setUseLogScale(e.target.checked)}
-            style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
-          />
-          <label htmlFor="heatmap-log-scale" style={{ cursor: 'pointer', fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)' }}>
-            Log Scale Mapping (ln(x + 1))
-          </label>
+        <div className="filter-item">
+          <div className="scale-toggle-group">
+            <button
+              type="button"
+              className={`scale-toggle-btn ${!useLogScale ? 'active' : ''}`}
+              onClick={() => setUseLogScale(false)}
+            >
+              Linear
+            </button>
+            <button
+              type="button"
+              className={`scale-toggle-btn ${useLogScale ? 'active' : ''}`}
+              onClick={() => setUseLogScale(true)}
+            >
+              Log Scale ln(x+1)
+            </button>
+          </div>
         </div>
       </div>
 

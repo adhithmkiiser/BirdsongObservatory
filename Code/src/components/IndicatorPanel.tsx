@@ -213,17 +213,24 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
           </select>
         </div>
 
-        <div className="filter-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.2rem' }}>
-          <input
-            type="checkbox"
-            id="indicator-log-scale"
-            checked={useLogScale}
-            onChange={(e) => setUseLogScale(e.target.checked)}
-            style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
-          />
-          <label htmlFor="indicator-log-scale" style={{ cursor: 'pointer', fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)' }}>
-            Log Scale Mapping (ln(x + 1))
-          </label>
+        <div className="filter-item">
+          <label className="filter-label">Visual Scale</label>
+          <div className="scale-toggle-group">
+            <button
+              type="button"
+              className={`scale-toggle-btn ${!useLogScale ? 'active' : ''}`}
+              onClick={() => setUseLogScale(false)}
+            >
+              Linear
+            </button>
+            <button
+              type="button"
+              className={`scale-toggle-btn ${useLogScale ? 'active' : ''}`}
+              onClick={() => setUseLogScale(true)}
+            >
+              Log Scale ln(x+1)
+            </button>
+          </div>
         </div>
       </div>
 
