@@ -15,6 +15,7 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
   selectedSiteGroup,
 }) => {
   const [indicatorClass, setIndicatorClass] = useState<string>('recovery'); // recovery, lantana, all
+  const [useLogScale, setUseLogScale] = useState<boolean>(true); // default to true to match python scripts
 
   const config = appConfig as Config;
 
@@ -79,17 +80,20 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
   }, [processedSpecies]);
 
   const chartOption = useMemo(() => {
-    const data: [number, number, number][] = [];
+    const data: [number, number, number, number][] = [];
     let maxVal = 1;
 
     yCategories.forEach((sp, yIdx) => {
       filteredRecs.forEach((rec, xIdx) => {
         const recKey = `${rec.site_group}/${rec.recorder_id}`;
         const val = speciesDetectionsMatrix[sp]?.[recKey] || 0;
-        data.push([xIdx, yIdx, val]);
+        const colorVal = useLogScale ? Math.log1p(val) : val;
+        data.push([xIdx, yIdx, colorVal, val]);
         if (val > maxVal) maxVal = val;
       });
     });
+
+    const maxColorVal = useLogScale ? Math.log1p(maxVal) : Math.max(10, Math.ceil(maxVal * 0.4));
 
     return {
       tooltip: {
@@ -97,7 +101,7 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
         formatter: (params: any) => {
           const xIdx = params.value[0];
           const yIdx = params.value[1];
-          const val = params.value[2];
+          const val = params.value[3]; // raw call count
           
           const rec = filteredRecs[xIdx];
           const spName = yCategories[yIdx];
@@ -144,7 +148,7 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
       },
       visualMap: {
         min: 0,
-        max: Math.max(10, Math.ceil(maxVal * 0.4)),
+        max: maxColorVal,
         calculable: true,
         orient: 'horizontal',
         left: 'center',
@@ -153,7 +157,11 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
           // Viridis color scale
           color: ['#440154', '#3b528b', '#21918c', '#5dc963', '#fde725']
         },
-        textStyle: { color: '#475569', fontSize: 10 }
+        textStyle: { color: '#475569', fontSize: 10 },
+        formatter: (value: number) => {
+          return useLogScale ? value.toFixed(1) : Math.round(value).toString();
+        },
+        text: [useLogScale ? 'log(Detections + 1)' : 'Detections', '']
       },
       series: [
         {
@@ -164,7 +172,7 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
             show: yCategories.length <= 25,
             fontSize: 8,
             color: '#fff',
-            formatter: (params: any) => params.value[2] || ''
+            formatter: (params: any) => params.value[3] || '' // display raw call count inside cell
           },
           emphasis: {
             itemStyle: {
@@ -175,7 +183,7 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
         }
       ]
     };
-  }, [filteredRecs, xCategories, yCategories, speciesDetectionsMatrix]);
+  }, [filteredRecs, xCategories, yCategories, speciesDetectionsMatrix, useLogScale]);
 
   const chartHeight = useMemo(() => {
     const count = yCategories.length;
@@ -191,8 +199,8 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
         </div>
       </div>
 
-      <div className="heatmap-controls" style={{ gap: '2rem' }}>
-        <div className="filter-item" style={{ flex: 1, minWidth: '200px' }}>
+      <div className="heatmap-controls" style={{ gap: '2rem', display: 'flex', alignItems: 'center', flexWrap: 'wrap' }}>
+        <div className="filter-item" style={{ minWidth: '200px' }}>
           <label className="filter-label">Indicator Category</label>
           <select
             className="select-input"
@@ -203,6 +211,19 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({
             <option value="lantana">Lantana-associated Species</option>
             <option value="all">All Indicator Species</option>
           </select>
+        </div>
+
+        <div className="filter-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginTop: '1.2rem' }}>
+          <input
+            type="checkbox"
+            id="indicator-log-scale"
+            checked={useLogScale}
+            onChange={(e) => setUseLogScale(e.target.checked)}
+            style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
+          />
+          <label htmlFor="indicator-log-scale" style={{ cursor: 'pointer', fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)' }}>
+            Log Scale Mapping (ln(x + 1))
+          </label>
         </div>
       </div>
 

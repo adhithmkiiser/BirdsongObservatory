@@ -20,6 +20,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [topN, setTopN] = useState<string>('25'); // Top 10, 25, 50, All
   const [sortBy, setSortBy] = useState<string>('detections'); // detections, alphabetical
+  const [useLogScale, setUseLogScale] = useState<boolean>(true); // default to true to match indicator species behavior and python settings
 
   // 1. Get filtered recorders for X-Axis
   const filteredRecs = useMemo(() => {
@@ -74,7 +75,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
 
   // 3. Construct ECharts Heatmap Data
   const chartOption = useMemo(() => {
-    const data: [number, number, number][] = [];
+    const data: [number, number, number, number][] = [];
     let maxVal = 1;
 
     // Y categories are reversed in yCategories
@@ -82,10 +83,13 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
       filteredRecs.forEach((rec, xIdx) => {
         const recKey = `${rec.site_group}/${rec.recorder_id}`;
         const val = speciesDetectionsMatrix[sp]?.[recKey] || 0;
-        data.push([xIdx, yIdx, val]);
+        const colorVal = useLogScale ? Math.log1p(val) : val;
+        data.push([xIdx, yIdx, colorVal, val]);
         if (val > maxVal) maxVal = val;
       });
     });
+
+    const maxColorVal = useLogScale ? Math.log1p(maxVal) : Math.max(10, Math.ceil(maxVal * 0.4));
 
     return {
       tooltip: {
@@ -93,7 +97,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
         formatter: (params: any) => {
           const xIdx = params.value[0];
           const yIdx = params.value[1];
-          const val = params.value[2];
+          const val = params.value[3]; // raw calls count
           
           const rec = filteredRecs[xIdx];
           const spName = yCategories[yIdx];
@@ -140,7 +144,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
       },
       visualMap: {
         min: 0,
-        max: Math.max(10, Math.ceil(maxVal * 0.4)), // Scale visualMap max for better color differentiation
+        max: maxColorVal,
         calculable: true,
         orient: 'horizontal',
         left: 'center',
@@ -149,7 +153,11 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
           // Viridis color scale: dark blue-purple -> green -> yellow
           color: ['#440154', '#3b528b', '#21918c', '#5dc963', '#fde725']
         },
-        textStyle: { color: '#475569', fontSize: 10 }
+        textStyle: { color: '#475569', fontSize: 10 },
+        formatter: (value: number) => {
+          return useLogScale ? value.toFixed(1) : Math.round(value).toString();
+        },
+        text: [useLogScale ? 'log(Detections + 1)' : 'Detections', '']
       },
       series: [
         {
@@ -160,7 +168,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
             show: selectedSiteGroup !== 'All' && yCategories.length <= 30,
             fontSize: 8,
             color: '#fff',
-            formatter: (params: any) => params.value[2] || ''
+            formatter: (params: any) => params.value[3] || '' // display raw call count inside cells
           },
           emphasis: {
             itemStyle: {
@@ -171,7 +179,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
         }
       ]
     };
-  }, [filteredRecs, xCategories, yCategories, speciesDetectionsMatrix, selectedSiteGroup]);
+  }, [filteredRecs, xCategories, yCategories, speciesDetectionsMatrix, selectedSiteGroup, useLogScale]);
 
   // Adjust height based on number of species
   const chartHeight = useMemo(() => {
@@ -191,13 +199,13 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
           onClick={() => onDownloadCSV(processedSpecies.map((s) => s.name), filteredRecs)}
         >
           <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
           </svg>
           Download Matrix CSV
         </button>
       </div>
 
-      <div className="heatmap-controls">
+      <div className="heatmap-controls" style={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
         <div className="search-box">
           <svg className="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" style={{ width: '18px', height: '18px' }}>
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -225,6 +233,19 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
             <option value="detections">Sort by Detections</option>
             <option value="alphabetical">Sort Alphabetically</option>
           </select>
+        </div>
+
+        <div className="filter-item" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <input
+            type="checkbox"
+            id="heatmap-log-scale"
+            checked={useLogScale}
+            onChange={(e) => setUseLogScale(e.target.checked)}
+            style={{ width: '18px', height: '18px', cursor: 'pointer', accentColor: 'var(--color-primary)' }}
+          />
+          <label htmlFor="heatmap-log-scale" style={{ cursor: 'pointer', fontSize: '0.9rem', fontWeight: 600, color: 'var(--text-main)' }}>
+            Log Scale Mapping (ln(x + 1))
+          </label>
         </div>
       </div>
 
