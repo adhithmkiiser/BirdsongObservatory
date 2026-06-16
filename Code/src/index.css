@@ -94,6 +94,13 @@ body {
   line-height: 1.2;
 }
 
+.header-logo {
+  height: 32px;
+  width: auto;
+  margin-right: 0.75rem;
+  object-fit: contain;
+}
+
 /* Hero section introductory banner styling */
 .hero-section {
   background: linear-gradient(135deg, #091a10 0%, #0f172a 60%, #1e293b 100%);

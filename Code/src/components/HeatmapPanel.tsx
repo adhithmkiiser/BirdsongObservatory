@@ -119,7 +119,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
         top: '5%',
         left: '20%', // Leave space for long species names
         right: '5%',
-        bottom: '12%',
+        bottom: 115,
         containLabel: false
       },
       xAxis: {
@@ -148,7 +148,7 @@ const HeatmapPanel: React.FC<HeatmapPanelProps> = ({
         calculable: true,
         orient: 'horizontal',
         left: 'center',
-        bottom: '0%',
+        bottom: 5,
         inRange: {
           // Forest Teal & Emerald gradient
           color: ['#f8fafc', '#ccfbf1', '#2dd4bf', '#0d9488', '#0f766e', '#115e59', '#134e4a']
