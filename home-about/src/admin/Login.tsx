@@ -221,16 +221,6 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
               <button type="submit" className="btn btn-primary login-btn">
                 Sign In
               </button>
-            </form>
-
-            <div className="login-help-text">
-              <strong>Credentials Info:</strong>
-              <ul>
-                <li>IISER Admin: <code>admin / iiser123</code></li>
-                <li>TST Project Manager: <code>manager_tst / tst123</code></li>
-                <li>Nilgiri Site Manager: <code>manager_nilgiri / nilgiri123</code></li>
-              </ul>
-            </div>
           </>
         )}
 

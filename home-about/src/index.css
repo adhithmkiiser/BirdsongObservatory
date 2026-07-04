@@ -2574,22 +2574,33 @@ a.section-link:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  min-height: 100vh; /* Changed to full height */
+  /* Beautiful misty forest background from Unsplash */
+  background: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), 
+              url('https://images.unsplash.com/photo-1448375240586-882707bf8887?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
   padding: 2rem;
+  margin: -2rem; /* Negate any default padding if inherited */
 }
 
 .login-card {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 10px 25px -5px rgba(15, 41, 27, 0.08), 0 8px 10px -6px rgba(15, 41, 27, 0.05);
-  border: 1px solid var(--border-color);
-  padding: 3rem;
+  /* Premium Glassmorphism Effect */
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 3.5rem;
   width: 100%;
-  max-width: 460px;
+  max-width: 480px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.login-card:hover {
+  transform: translateY(-4px);
 }
 
 .login-header {
