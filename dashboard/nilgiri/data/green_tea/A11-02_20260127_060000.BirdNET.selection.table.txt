@@ -1,0 +1,20 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	2295.0	2298.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.1015	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2295.0
+2	Spectrogram 1	1	2433.0	2436.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.2907	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2433.0
+3	Spectrogram 1	1	2466.0	2469.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.1176	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2466.0
+4	Spectrogram 1	1	2472.0	2475.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.3403	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2472.0
+5	Spectrogram 1	1	2478.0	2481.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.3522	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2478.0
+6	Spectrogram 1	1	2484.0	2487.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.4938	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2484.0
+7	Spectrogram 1	1	2493.0	2496.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.1293	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2493.0
+8	Spectrogram 1	1	2499.0	2502.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.3156	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	2499.0
+9	Spectrogram 1	1	3180.0	3183.0	0	15000	White-cheeked Barbet	whcbar1	0.1503	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3180.0
+10	Spectrogram 1	1	3192.0	3195.0	0	15000	White-cheeked Barbet	whcbar1	0.2383	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3192.0
+11	Spectrogram 1	1	3195.0	3198.0	0	15000	White-cheeked Barbet	whcbar1	0.1295	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3195.0
+12	Spectrogram 1	1	3246.0	3249.0	0	15000	White-cheeked Barbet	whcbar1	0.6939	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3246.0
+13	Spectrogram 1	1	3249.0	3252.0	0	15000	White-cheeked Barbet	whcbar1	0.7908	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3249.0
+14	Spectrogram 1	1	3252.0	3255.0	0	15000	White-cheeked Barbet	whcbar1	0.4111	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3252.0
+15	Spectrogram 1	1	3258.0	3261.0	0	15000	White-cheeked Barbet	whcbar1	0.1296	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3258.0
+16	Spectrogram 1	1	3264.0	3267.0	0	15000	White-cheeked Barbet	whcbar1	0.5083	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3264.0
+17	Spectrogram 1	1	3321.0	3324.0	0	15000	Jungle Owlet	junowl1	0.3104	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3321.0
+18	Spectrogram 1	1	3486.0	3489.0	0	15000	Yellow-browed Bulbul	yebbul3	0.3237	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3486.0
+19	Spectrogram 1	1	3495.0	3498.0	0	15000	Yellow-browed Bulbul	yebbul3	0.2209	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_060000.wav	3495.0

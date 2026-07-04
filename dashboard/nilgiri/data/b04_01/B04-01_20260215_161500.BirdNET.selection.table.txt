@@ -1,0 +1,12 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	45.0	48.0	0	12000	Red-whiskered Bulbul	rewbul	0.1170	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	45.0
+2	Spectrogram 1	1	66.0	69.0	0	12000	Cinereous Tit	gretit2	0.1479	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	66.0
+3	Spectrogram 1	1	69.0	72.0	0	12000	Red-whiskered Bulbul	rewbul	0.1478	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	69.0
+4	Spectrogram 1	1	75.0	78.0	0	12000	Red-whiskered Bulbul	rewbul	0.2490	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	75.0
+5	Spectrogram 1	1	120.0	123.0	0	12000	Red-whiskered Bulbul	rewbul	0.2443	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	120.0
+6	Spectrogram 1	1	165.0	168.0	0	12000	Dunlin	dunlin	0.1435	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	165.0
+7	Spectrogram 1	1	264.0	267.0	0	12000	Little Ringed Plover	lirplo	0.1266	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	264.0
+8	Spectrogram 1	1	273.0	276.0	0	12000	Large-billed Crow	labcro1	0.1288	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	273.0
+9	Spectrogram 1	1	276.0	279.0	0	12000	Large-billed Crow	labcro1	0.1682	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	276.0
+10	Spectrogram 1	1	294.0	297.0	0	12000	Large-billed Crow	labcro1	0.3179	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	294.0
+11	Spectrogram 1	1	297.0	300.0	0	12000	Large-billed Crow	labcro1	0.4914	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_161500.wav	297.0

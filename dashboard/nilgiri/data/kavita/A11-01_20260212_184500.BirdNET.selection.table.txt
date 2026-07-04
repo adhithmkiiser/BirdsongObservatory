@@ -1,0 +1,3 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	9.0	12.0	0	12000	Puff-throated Babbler	putbab1	0.1860	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_184500.wav	9.0
+2	Spectrogram 1	1	72.0	75.0	0	12000	Tickell's Blue Flycatcher	tibfly3	0.2301	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_184500.wav	72.0

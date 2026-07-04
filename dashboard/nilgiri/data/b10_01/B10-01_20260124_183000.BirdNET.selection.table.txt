@@ -1,0 +1,17 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	0.0	3.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.9020	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	0.0
+2	Spectrogram 1	1	15.0	18.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.9850	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	15.0
+3	Spectrogram 1	1	30.0	33.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.4167	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	30.0
+4	Spectrogram 1	1	42.0	45.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.5068	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	42.0
+5	Spectrogram 1	1	60.0	63.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.8326	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	60.0
+6	Spectrogram 1	1	75.0	78.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.8892	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	75.0
+7	Spectrogram 1	1	78.0	81.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.1757	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	78.0
+8	Spectrogram 1	1	114.0	117.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.3248	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	114.0
+9	Spectrogram 1	1	126.0	129.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.7595	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	126.0
+10	Spectrogram 1	1	135.0	138.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.1399	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	135.0
+11	Spectrogram 1	1	138.0	141.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.1105	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	138.0
+12	Spectrogram 1	1	174.0	177.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.1224	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	174.0
+13	Spectrogram 1	1	210.0	213.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.3049	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	210.0
+14	Spectrogram 1	1	216.0	219.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.3865	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	216.0
+15	Spectrogram 1	1	225.0	228.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.7166	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	225.0
+16	Spectrogram 1	1	243.0	246.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.3322	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260124_183000.wav	243.0

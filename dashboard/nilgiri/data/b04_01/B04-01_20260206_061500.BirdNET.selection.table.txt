@@ -1,0 +1,2 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	9.0	12.0	0	12000	Common Cuckoo	comcuc	0.6120	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_061500.wav	9.0

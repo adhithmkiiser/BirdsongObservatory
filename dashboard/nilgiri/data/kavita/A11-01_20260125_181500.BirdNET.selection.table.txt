@@ -1,0 +1,11 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	183.0	186.0	0	12000	Indian White-eye	indwhe1	0.2340	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	183.0
+2	Spectrogram 1	1	192.0	195.0	0	12000	Green Warbler	grnwar1	0.3230	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	192.0
+3	Spectrogram 1	1	192.0	195.0	0	12000	Greenish Warbler	grewar3	0.1238	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	192.0
+4	Spectrogram 1	1	201.0	204.0	0	12000	Indian White-eye	indwhe1	0.6160	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	201.0
+5	Spectrogram 1	1	213.0	216.0	0	12000	Indian White-eye	indwhe1	0.7914	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	213.0
+6	Spectrogram 1	1	225.0	228.0	0	12000	Indian White-eye	indwhe1	0.2227	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	225.0
+7	Spectrogram 1	1	228.0	231.0	0	12000	Indian White-eye	indwhe1	0.5210	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	228.0
+8	Spectrogram 1	1	261.0	264.0	0	12000	Indian White-eye	indwhe1	0.2017	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	261.0
+9	Spectrogram 1	1	276.0	279.0	0	12000	Indian White-eye	indwhe1	0.1160	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	276.0
+10	Spectrogram 1	1	291.0	294.0	0	12000	Indian White-eye	indwhe1	0.1724	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_181500.wav	291.0

@@ -1,0 +1,15 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	135.0	138.0	0	12000	Indian White-eye	indwhe1	0.2837	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	135.0
+2	Spectrogram 1	1	174.0	177.0	0	12000	Indian White-eye	indwhe1	0.3392	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	174.0
+3	Spectrogram 1	1	180.0	183.0	0	12000	Indian White-eye	indwhe1	0.7770	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	180.0
+4	Spectrogram 1	1	192.0	195.0	0	12000	Indian White-eye	indwhe1	0.6163	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	192.0
+5	Spectrogram 1	1	195.0	198.0	0	12000	Indian White-eye	indwhe1	0.2206	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	195.0
+6	Spectrogram 1	1	210.0	213.0	0	12000	Indian White-eye	indwhe1	0.1469	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	210.0
+7	Spectrogram 1	1	219.0	222.0	0	12000	Indian White-eye	indwhe1	0.2525	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	219.0
+8	Spectrogram 1	1	231.0	234.0	0	12000	Indian White-eye	indwhe1	0.6548	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	231.0
+9	Spectrogram 1	1	273.0	276.0	0	12000	Indian White-eye	indwhe1	0.1598	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	273.0
+10	Spectrogram 1	1	279.0	282.0	0	12000	Indian White-eye	indwhe1	0.2500	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	279.0
+11	Spectrogram 1	1	279.0	282.0	0	12000	Gray Junglefowl	grejun2	0.1152	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	279.0
+12	Spectrogram 1	1	285.0	288.0	0	12000	Indian White-eye	indwhe1	0.7937	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	285.0
+13	Spectrogram 1	1	291.0	294.0	0	12000	Indian White-eye	indwhe1	0.2039	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	291.0
+14	Spectrogram 1	1	294.0	297.0	0	12000	Gray Junglefowl	grejun2	0.1037	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260211_061500.wav	294.0

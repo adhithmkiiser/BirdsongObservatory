@@ -1,0 +1,22 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	102.0	105.0	0	12000	Gray Junglefowl	grejun2	0.1252	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	102.0
+2	Spectrogram 1	1	111.0	114.0	0	12000	Gray Junglefowl	grejun2	0.2315	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	111.0
+3	Spectrogram 1	1	120.0	123.0	0	12000	Gray Junglefowl	grejun2	0.3624	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	120.0
+4	Spectrogram 1	1	129.0	132.0	0	12000	Gray Junglefowl	grejun2	0.2944	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	129.0
+5	Spectrogram 1	1	138.0	141.0	0	12000	Indian Scimitar-Babbler	insbab1	0.8322	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	138.0
+6	Spectrogram 1	1	138.0	141.0	0	12000	Gray Junglefowl	grejun2	0.2399	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	138.0
+7	Spectrogram 1	1	147.0	150.0	0	12000	Indian Scimitar-Babbler	insbab1	0.9691	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	147.0
+8	Spectrogram 1	1	147.0	150.0	0	12000	Gray Junglefowl	grejun2	0.3187	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	147.0
+9	Spectrogram 1	1	156.0	159.0	0	12000	Indian Scimitar-Babbler	insbab1	0.9923	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	156.0
+10	Spectrogram 1	1	165.0	168.0	0	12000	Gray Junglefowl	grejun2	0.5631	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	165.0
+11	Spectrogram 1	1	174.0	177.0	0	12000	Gray Junglefowl	grejun2	0.2645	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	174.0
+12	Spectrogram 1	1	183.0	186.0	0	12000	Gray Junglefowl	grejun2	0.4092	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	183.0
+13	Spectrogram 1	1	192.0	195.0	0	12000	Gray Junglefowl	grejun2	0.2948	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	192.0
+14	Spectrogram 1	1	204.0	207.0	0	12000	Gray Junglefowl	grejun2	0.6872	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	204.0
+15	Spectrogram 1	1	216.0	219.0	0	12000	Gray Junglefowl	grejun2	0.2446	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	216.0
+16	Spectrogram 1	1	231.0	234.0	0	12000	Gray Junglefowl	grejun2	0.5934	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	231.0
+17	Spectrogram 1	1	240.0	243.0	0	12000	Black-crowned Night-Heron	bcnher	0.2267	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	240.0
+18	Spectrogram 1	1	243.0	246.0	0	12000	Black-crowned Night-Heron	bcnher	0.2571	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	243.0
+19	Spectrogram 1	1	255.0	258.0	0	12000	Black-crowned Night-Heron	bcnher	0.3514	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	255.0
+20	Spectrogram 1	1	267.0	270.0	0	12000	Black-crowned Night-Heron	bcnher	0.1365	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	267.0
+21	Spectrogram 1	1	270.0	273.0	0	12000	Black-crowned Night-Heron	bcnher	0.1786	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_161500.wav	270.0

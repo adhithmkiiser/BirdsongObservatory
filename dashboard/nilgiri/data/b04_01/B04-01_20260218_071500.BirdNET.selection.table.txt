@@ -1,0 +1,21 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	15.0	18.0	0	12000	Cinereous Tit	gretit2	0.1105	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	15.0
+2	Spectrogram 1	1	21.0	24.0	0	12000	Cinereous Tit	gretit2	0.2495	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	21.0
+3	Spectrogram 1	1	21.0	24.0	0	12000	Orange Minivet	scamin3	0.2233	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	21.0
+4	Spectrogram 1	1	42.0	45.0	0	12000	Indian White-eye	indwhe1	0.2751	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	42.0
+5	Spectrogram 1	1	69.0	72.0	0	12000	Cinereous Tit	gretit2	0.2273	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	69.0
+6	Spectrogram 1	1	81.0	84.0	0	12000	Gray Junglefowl	grejun2	0.4857	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	81.0
+7	Spectrogram 1	1	81.0	84.0	0	12000	Indian Scimitar-Babbler	insbab1	0.1694	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	81.0
+8	Spectrogram 1	1	135.0	138.0	0	12000	Indian White-eye	indwhe1	0.2582	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	135.0
+9	Spectrogram 1	1	156.0	159.0	0	12000	Gray Junglefowl	grejun2	0.1522	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	156.0
+10	Spectrogram 1	1	255.0	258.0	0	12000	Cinereous Tit	gretit2	0.5463	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	255.0
+11	Spectrogram 1	1	258.0	261.0	0	12000	Cinereous Tit	gretit2	0.4314	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	258.0
+12	Spectrogram 1	1	264.0	267.0	0	12000	Cinereous Tit	gretit2	0.5916	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	264.0
+13	Spectrogram 1	1	267.0	270.0	0	12000	Cinereous Tit	gretit2	0.3062	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	267.0
+14	Spectrogram 1	1	270.0	273.0	0	12000	Large-billed Crow	labcro1	0.1045	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	270.0
+15	Spectrogram 1	1	273.0	276.0	0	12000	Large-billed Crow	labcro1	0.1004	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	273.0
+16	Spectrogram 1	1	276.0	279.0	0	12000	Cinereous Tit	gretit2	0.3918	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	276.0
+17	Spectrogram 1	1	276.0	279.0	0	12000	Large-billed Crow	labcro1	0.1112	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	276.0
+18	Spectrogram 1	1	279.0	282.0	0	12000	Large-billed Crow	labcro1	0.1144	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	279.0
+19	Spectrogram 1	1	288.0	291.0	0	12000	Greater Coucal	grecou1	0.6103	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	288.0
+20	Spectrogram 1	1	291.0	294.0	0	12000	Large-billed Crow	labcro1	0.1431	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260218_071500.wav	291.0

@@ -1,0 +1,2 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	219.0	222.0	0	12000	Gray Wagtail	grywag	0.1544	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260206_184500.wav	219.0

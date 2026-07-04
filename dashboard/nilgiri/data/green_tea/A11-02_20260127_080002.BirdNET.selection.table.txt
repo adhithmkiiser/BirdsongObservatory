@@ -1,0 +1,34 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	477.0	480.0	0	15000	White-cheeked Barbet	whcbar1	0.2078	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	477.0
+2	Spectrogram 1	1	1278.0	1281.0	0	15000	Greenish Warbler	grewar3	0.4938	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	1278.0
+3	Spectrogram 1	1	1284.0	1287.0	0	15000	Greenish Warbler	grewar3	0.1389	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	1284.0
+4	Spectrogram 1	1	1380.0	1383.0	0	15000	Large-billed Leaf Warbler	lblwar1	0.6191	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	1380.0
+5	Spectrogram 1	1	1530.0	1533.0	0	15000	Yellow-browed Bulbul	yebbul3	0.3103	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	1530.0
+6	Spectrogram 1	1	1554.0	1557.0	0	15000	Yellow-browed Bulbul	yebbul3	0.5554	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	1554.0
+7	Spectrogram 1	1	1770.0	1773.0	0	15000	Green Warbler	grnwar1	0.2130	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	1770.0
+8	Spectrogram 1	1	1782.0	1785.0	0	15000	Greenish Warbler	grewar3	0.2561	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	1782.0
+9	Spectrogram 1	1	2064.0	2067.0	0	15000	Red-breasted Flycatcher	rebfly	0.2518	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2064.0
+10	Spectrogram 1	1	2613.0	2616.0	0	15000	Red-breasted Flycatcher	rebfly	0.6026	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2613.0
+11	Spectrogram 1	1	2811.0	2814.0	0	15000	Yellow-browed Bulbul	yebbul3	0.1127	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2811.0
+12	Spectrogram 1	1	2814.0	2817.0	0	15000	Yellow-browed Bulbul	yebbul3	0.4611	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2814.0
+13	Spectrogram 1	1	2817.0	2820.0	0	15000	Yellow-browed Bulbul	yebbul3	0.9199	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2817.0
+14	Spectrogram 1	1	2820.0	2823.0	0	15000	Yellow-browed Bulbul	yebbul3	0.7916	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2820.0
+15	Spectrogram 1	1	2823.0	2826.0	0	15000	Yellow-browed Bulbul	yebbul3	0.2212	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2823.0
+16	Spectrogram 1	1	2823.0	2826.0	0	15000	Brown-cheeked Fulvetta	brcful1	0.1332	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2823.0
+17	Spectrogram 1	1	2829.0	2832.0	0	15000	Yellow-browed Bulbul	yebbul3	0.2075	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2829.0
+18	Spectrogram 1	1	2832.0	2835.0	0	15000	Yellow-browed Bulbul	yebbul3	0.4008	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2832.0
+19	Spectrogram 1	1	2835.0	2838.0	0	15000	Yellow-browed Bulbul	yebbul3	0.4520	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2835.0
+20	Spectrogram 1	1	2844.0	2847.0	0	15000	Yellow-browed Bulbul	yebbul3	0.1619	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2844.0
+21	Spectrogram 1	1	2847.0	2850.0	0	15000	Yellow-browed Bulbul	yebbul3	0.6892	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2847.0
+22	Spectrogram 1	1	2850.0	2853.0	0	15000	Yellow-browed Bulbul	yebbul3	0.8453	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2850.0
+23	Spectrogram 1	1	2856.0	2859.0	0	15000	Yellow-browed Bulbul	yebbul3	0.3721	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2856.0
+24	Spectrogram 1	1	2859.0	2862.0	0	15000	Yellow-browed Bulbul	yebbul3	0.1315	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2859.0
+25	Spectrogram 1	1	2868.0	2871.0	0	15000	Yellow-browed Bulbul	yebbul3	0.2641	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2868.0
+26	Spectrogram 1	1	2880.0	2883.0	0	15000	Yellow-browed Bulbul	yebbul3	0.1414	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	2880.0
+27	Spectrogram 1	1	3150.0	3153.0	0	15000	Greenish Warbler	grewar3	0.4237	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	3150.0
+28	Spectrogram 1	1	3282.0	3285.0	0	15000	Greenish Warbler	grewar3	0.4215	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	3282.0
+29	Spectrogram 1	1	3282.0	3285.0	0	15000	Green Warbler	grnwar1	0.1292	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	3282.0
+30	Spectrogram 1	1	3405.0	3408.0	0	15000	Greenish Warbler	grewar3	0.2637	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	3405.0
+31	Spectrogram 1	1	3444.0	3447.0	0	15000	Green Warbler	grnwar1	0.5359	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	3444.0
+32	Spectrogram 1	1	3444.0	3447.0	0	15000	Greenish Warbler	grewar3	0.1375	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	3444.0
+33	Spectrogram 1	1	3447.0	3450.0	0	15000	Greenish Warbler	grewar3	0.4751	F:\Nilgiris_rawdata\A11-02\Data\A11-02_20260127_080002.wav	3447.0

@@ -1,0 +1,12 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	129.0	132.0	0	12000	Green Warbler	grnwar1	0.1445	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	129.0
+2	Spectrogram 1	1	159.0	162.0	0	12000	Greenish Warbler	grewar3	0.2998	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	159.0
+3	Spectrogram 1	1	162.0	165.0	0	12000	Greenish Warbler	grewar3	0.2519	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	162.0
+4	Spectrogram 1	1	165.0	168.0	0	12000	Greenish Warbler	grewar3	0.1454	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	165.0
+5	Spectrogram 1	1	171.0	174.0	0	12000	Greenish Warbler	grewar3	0.2380	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	171.0
+6	Spectrogram 1	1	174.0	177.0	0	12000	Greenish Warbler	grewar3	0.4297	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	174.0
+7	Spectrogram 1	1	189.0	192.0	0	12000	Greenish Warbler	grewar3	0.4677	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	189.0
+8	Spectrogram 1	1	285.0	288.0	0	12000	Greenish Warbler	grewar3	0.8403	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	285.0
+9	Spectrogram 1	1	288.0	291.0	0	12000	Greenish Warbler	grewar3	0.9661	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	288.0
+10	Spectrogram 1	1	291.0	294.0	0	12000	Greenish Warbler	grewar3	0.2421	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	291.0
+11	Spectrogram 1	1	297.0	300.0	0	12000	Greenish Warbler	grewar3	0.3246	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_173000.wav	297.0

@@ -1,0 +1,2 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	279.0	282.0	0	12000	Ashy Drongo	ashdro1	0.2025	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_183000.wav	279.0

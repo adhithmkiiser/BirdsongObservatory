@@ -1,0 +1,27 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	0.0	3.0	0	12000	Red-whiskered Bulbul	rewbul	0.2141	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	0.0
+2	Spectrogram 1	1	9.0	12.0	0	12000	Red-whiskered Bulbul	rewbul	0.8160	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	9.0
+3	Spectrogram 1	1	15.0	18.0	0	12000	Red-whiskered Bulbul	rewbul	0.1832	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	15.0
+4	Spectrogram 1	1	21.0	24.0	0	12000	Indian White-eye	indwhe1	0.1066	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	21.0
+5	Spectrogram 1	1	24.0	27.0	0	12000	Red-whiskered Bulbul	rewbul	0.2705	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	24.0
+6	Spectrogram 1	1	27.0	30.0	0	12000	Red-whiskered Bulbul	rewbul	0.2415	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	27.0
+7	Spectrogram 1	1	33.0	36.0	0	12000	Gray Junglefowl	grejun2	0.2345	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	33.0
+8	Spectrogram 1	1	36.0	39.0	0	12000	Flame-throated Bulbul	bkcbul1	0.3595	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	36.0
+9	Spectrogram 1	1	36.0	39.0	0	12000	Red-whiskered Bulbul	rewbul	0.1674	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	36.0
+10	Spectrogram 1	1	36.0	39.0	0	12000	Gray Junglefowl	grejun2	0.1584	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	36.0
+11	Spectrogram 1	1	45.0	48.0	0	12000	Red-whiskered Bulbul	rewbul	0.5048	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	45.0
+12	Spectrogram 1	1	45.0	48.0	0	12000	Gray Junglefowl	grejun2	0.1353	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	45.0
+13	Spectrogram 1	1	48.0	51.0	0	12000	Large-billed Crow	labcro1	0.1156	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	48.0
+14	Spectrogram 1	1	51.0	54.0	0	12000	Red-whiskered Bulbul	rewbul	0.2997	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	51.0
+15	Spectrogram 1	1	51.0	54.0	0	12000	Gray Junglefowl	grejun2	0.1119	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	51.0
+16	Spectrogram 1	1	54.0	57.0	0	12000	Red-whiskered Bulbul	rewbul	0.2005	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	54.0
+17	Spectrogram 1	1	60.0	63.0	0	12000	Gray Junglefowl	grejun2	0.2601	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	60.0
+18	Spectrogram 1	1	60.0	63.0	0	12000	Red-whiskered Bulbul	rewbul	0.1134	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	60.0
+19	Spectrogram 1	1	63.0	66.0	0	12000	Gray Junglefowl	grejun2	0.1347	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	63.0
+20	Spectrogram 1	1	69.0	72.0	0	12000	Red-whiskered Bulbul	rewbul	0.1469	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	69.0
+21	Spectrogram 1	1	81.0	84.0	0	12000	Red-whiskered Bulbul	rewbul	0.1868	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	81.0
+22	Spectrogram 1	1	114.0	117.0	0	12000	Gray Junglefowl	grejun2	0.1505	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	114.0
+23	Spectrogram 1	1	117.0	120.0	0	12000	Gray Junglefowl	grejun2	0.1210	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	117.0
+24	Spectrogram 1	1	123.0	126.0	0	12000	Gray Junglefowl	grejun2	0.1774	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	123.0
+25	Spectrogram 1	1	258.0	261.0	0	12000	Indian White-eye	indwhe1	0.6007	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	258.0
+26	Spectrogram 1	1	291.0	294.0	0	12000	Indian Scimitar-Babbler	insbab1	0.1255	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_084500.wav	291.0

@@ -1,0 +1,2 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	57.0	60.0	0	12000	Common Snipe	comsni	0.1207	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_163000.wav	57.0

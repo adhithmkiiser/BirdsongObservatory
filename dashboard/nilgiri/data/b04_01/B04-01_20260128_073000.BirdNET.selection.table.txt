@@ -1,0 +1,11 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	9.0	12.0	0	12000	Indian Scimitar-Babbler	insbab1	0.6666	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	9.0
+2	Spectrogram 1	1	9.0	12.0	0	12000	Red-whiskered Bulbul	rewbul	0.1332	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	9.0
+3	Spectrogram 1	1	15.0	18.0	0	12000	Indian Scimitar-Babbler	insbab1	0.8785	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	15.0
+4	Spectrogram 1	1	18.0	21.0	0	12000	Indian Scimitar-Babbler	insbab1	0.4551	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	18.0
+5	Spectrogram 1	1	27.0	30.0	0	12000	Indian Scimitar-Babbler	insbab1	0.8747	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	27.0
+6	Spectrogram 1	1	33.0	36.0	0	12000	Indian Scimitar-Babbler	insbab1	0.8143	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	33.0
+7	Spectrogram 1	1	63.0	66.0	0	12000	Indian Scimitar-Babbler	insbab1	0.8767	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	63.0
+8	Spectrogram 1	1	99.0	102.0	0	12000	Indian Scimitar-Babbler	insbab1	0.2389	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	99.0
+9	Spectrogram 1	1	138.0	141.0	0	12000	Indian White-eye	indwhe1	0.3126	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	138.0
+10	Spectrogram 1	1	147.0	150.0	0	12000	Indian White-eye	indwhe1	0.3339	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260128_073000.wav	147.0

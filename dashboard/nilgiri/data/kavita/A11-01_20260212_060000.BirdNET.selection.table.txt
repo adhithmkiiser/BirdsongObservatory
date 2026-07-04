@@ -1,0 +1,3 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	243.0	246.0	0	12000	Eurasian Coot	eurcoo	0.1883	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_060000.wav	243.0
+2	Spectrogram 1	1	243.0	246.0	0	12000	Eurasian Moorhen	commoo3	0.1517	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_060000.wav	243.0

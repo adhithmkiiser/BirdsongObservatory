@@ -1,0 +1,38 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	0.0	3.0	0	12000	Indian White-eye	indwhe1	0.2566	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	0.0
+2	Spectrogram 1	1	24.0	27.0	0	12000	Greenish Warbler	grewar3	0.1258	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	24.0
+3	Spectrogram 1	1	42.0	45.0	0	12000	Dunlin	dunlin	0.1518	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	42.0
+4	Spectrogram 1	1	45.0	48.0	0	12000	Indian White-eye	indwhe1	0.7288	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	45.0
+5	Spectrogram 1	1	48.0	51.0	0	12000	Indian White-eye	indwhe1	0.2181	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	48.0
+6	Spectrogram 1	1	48.0	51.0	0	12000	Red Spurfowl	redspu1	0.1360	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	48.0
+7	Spectrogram 1	1	51.0	54.0	0	12000	Indian White-eye	indwhe1	0.5649	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	51.0
+8	Spectrogram 1	1	57.0	60.0	0	12000	Indian White-eye	indwhe1	0.8347	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	57.0
+9	Spectrogram 1	1	60.0	63.0	0	12000	Indian White-eye	indwhe1	0.7890	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	60.0
+10	Spectrogram 1	1	63.0	66.0	0	12000	Indian White-eye	indwhe1	0.6933	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	63.0
+11	Spectrogram 1	1	66.0	69.0	0	12000	Indian White-eye	indwhe1	0.4741	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	66.0
+12	Spectrogram 1	1	72.0	75.0	0	12000	Dunlin	dunlin	0.2886	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	72.0
+13	Spectrogram 1	1	72.0	75.0	0	12000	Indian White-eye	indwhe1	0.1329	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	72.0
+14	Spectrogram 1	1	75.0	78.0	0	12000	Indian White-eye	indwhe1	0.3424	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	75.0
+15	Spectrogram 1	1	81.0	84.0	0	12000	Indian White-eye	indwhe1	0.2553	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	81.0
+16	Spectrogram 1	1	87.0	90.0	0	12000	Indian White-eye	indwhe1	0.9418	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	87.0
+17	Spectrogram 1	1	87.0	90.0	0	12000	Dunlin	dunlin	0.2412	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	87.0
+18	Spectrogram 1	1	90.0	93.0	0	12000	Indian White-eye	indwhe1	0.1126	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	90.0
+19	Spectrogram 1	1	93.0	96.0	0	12000	Indian White-eye	indwhe1	0.3932	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	93.0
+20	Spectrogram 1	1	93.0	96.0	0	12000	Dunlin	dunlin	0.2920	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	93.0
+21	Spectrogram 1	1	96.0	99.0	0	12000	Indian White-eye	indwhe1	0.1371	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	96.0
+22	Spectrogram 1	1	102.0	105.0	0	12000	Indian White-eye	indwhe1	0.2662	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	102.0
+23	Spectrogram 1	1	108.0	111.0	0	12000	Green Warbler	grnwar1	0.1389	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	108.0
+24	Spectrogram 1	1	108.0	111.0	0	12000	Indian White-eye	indwhe1	0.1294	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	108.0
+25	Spectrogram 1	1	111.0	114.0	0	12000	Indian White-eye	indwhe1	0.3211	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	111.0
+26	Spectrogram 1	1	114.0	117.0	0	12000	Indian White-eye	indwhe1	0.2710	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	114.0
+27	Spectrogram 1	1	126.0	129.0	0	12000	Indian White-eye	indwhe1	0.8885	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	126.0
+28	Spectrogram 1	1	129.0	132.0	0	12000	Indian White-eye	indwhe1	0.3862	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	129.0
+29	Spectrogram 1	1	132.0	135.0	0	12000	Indian White-eye	indwhe1	0.1695	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	132.0
+30	Spectrogram 1	1	135.0	138.0	0	12000	Indian White-eye	indwhe1	0.1964	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	135.0
+31	Spectrogram 1	1	144.0	147.0	0	12000	Indian White-eye	indwhe1	0.2303	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	144.0
+32	Spectrogram 1	1	147.0	150.0	0	12000	Indian White-eye	indwhe1	0.5925	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	147.0
+33	Spectrogram 1	1	165.0	168.0	0	12000	Indian White-eye	indwhe1	0.4642	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	165.0
+34	Spectrogram 1	1	174.0	177.0	0	12000	Indian White-eye	indwhe1	0.3570	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	174.0
+35	Spectrogram 1	1	177.0	180.0	0	12000	Dunlin	dunlin	0.2689	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	177.0
+36	Spectrogram 1	1	192.0	195.0	0	12000	Indian White-eye	indwhe1	0.5871	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	192.0
+37	Spectrogram 1	1	261.0	264.0	0	12000	Indian White-eye	indwhe1	0.3344	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260131_161500.wav	261.0

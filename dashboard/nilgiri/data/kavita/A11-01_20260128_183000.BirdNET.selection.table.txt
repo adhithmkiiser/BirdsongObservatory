@@ -1,0 +1,7 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	45.0	48.0	0	12000	Large-billed Crow	labcro1	0.2633	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_183000.wav	45.0
+2	Spectrogram 1	1	51.0	54.0	0	12000	Large-billed Crow	labcro1	0.2013	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_183000.wav	51.0
+3	Spectrogram 1	1	66.0	69.0	0	12000	Large-billed Crow	labcro1	0.1677	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_183000.wav	66.0
+4	Spectrogram 1	1	72.0	75.0	0	12000	Large-billed Crow	labcro1	0.2469	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_183000.wav	72.0
+5	Spectrogram 1	1	75.0	78.0	0	12000	Large-billed Crow	labcro1	0.2548	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_183000.wav	75.0
+6	Spectrogram 1	1	87.0	90.0	0	12000	Barn Owl	brnowl	0.1387	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_183000.wav	87.0

@@ -1,0 +1,7 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	138.0	141.0	0	12000	Eurasian Collared-Dove	eucdov	0.1011	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_184500.wav	138.0
+2	Spectrogram 1	1	228.0	231.0	0	12000	Common Cuckoo	comcuc	0.6699	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_184500.wav	228.0
+3	Spectrogram 1	1	231.0	234.0	0	12000	Common Cuckoo	comcuc	0.3869	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_184500.wav	231.0
+4	Spectrogram 1	1	234.0	237.0	0	12000	Common Cuckoo	comcuc	0.1113	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_184500.wav	234.0
+5	Spectrogram 1	1	240.0	243.0	0	12000	Common Cuckoo	comcuc	0.1225	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_184500.wav	240.0
+6	Spectrogram 1	1	249.0	252.0	0	12000	Common Cuckoo	comcuc	0.1678	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260128_184500.wav	249.0

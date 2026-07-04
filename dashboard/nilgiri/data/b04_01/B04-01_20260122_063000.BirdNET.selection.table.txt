@@ -1,0 +1,7 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	72.0	75.0	0	12000	Large-billed Crow	labcro1	0.2063	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_063000.wav	72.0
+2	Spectrogram 1	1	84.0	87.0	0	12000	Large-billed Crow	labcro1	0.3240	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_063000.wav	84.0
+3	Spectrogram 1	1	105.0	108.0	0	12000	Green Warbler	grnwar1	0.6973	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_063000.wav	105.0
+4	Spectrogram 1	1	105.0	108.0	0	12000	Greenish Warbler	grewar3	0.3348	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_063000.wav	105.0
+5	Spectrogram 1	1	291.0	294.0	0	12000	Large-billed Crow	labcro1	0.4491	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_063000.wav	291.0
+6	Spectrogram 1	1	297.0	300.0	0	12000	Gray Junglefowl	grejun2	0.1283	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_063000.wav	297.0

@@ -1,0 +1,2 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	207.0	210.0	0	12000	Gray Junglefowl	grejun2	0.1213	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_181500.wav	207.0

@@ -1,0 +1,4 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	87.0	90.0	0	12000	Common Cuckoo	comcuc	0.1370	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260203_184500.wav	87.0
+2	Spectrogram 1	1	189.0	192.0	0	12000	Puff-throated Babbler	putbab1	0.1830	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260203_184500.wav	189.0
+3	Spectrogram 1	1	285.0	288.0	0	12000	Spotted Dove	spodov	0.1301	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260203_184500.wav	285.0

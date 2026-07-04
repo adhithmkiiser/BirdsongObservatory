@@ -1,0 +1,4 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	189.0	192.0	0	12000	Cinereous Tit	gretit2	0.4039	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_163000.wav	189.0
+2	Spectrogram 1	1	213.0	216.0	0	12000	Greenish Warbler	grewar3	0.1651	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_163000.wav	213.0
+3	Spectrogram 1	1	291.0	294.0	0	12000	Green Warbler	grnwar1	0.1365	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_163000.wav	291.0

@@ -1,0 +1,9 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	42.0	45.0	0	12000	Red-whiskered Bulbul	rewbul	0.5336	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	42.0
+2	Spectrogram 1	1	54.0	57.0	0	12000	Red-whiskered Bulbul	rewbul	0.3540	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	54.0
+3	Spectrogram 1	1	63.0	66.0	0	12000	Red-whiskered Bulbul	rewbul	0.4410	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	63.0
+4	Spectrogram 1	1	69.0	72.0	0	12000	Red-whiskered Bulbul	rewbul	0.1684	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	69.0
+5	Spectrogram 1	1	75.0	78.0	0	12000	Red-whiskered Bulbul	rewbul	0.1627	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	75.0
+6	Spectrogram 1	1	99.0	102.0	0	12000	Red-whiskered Bulbul	rewbul	0.1141	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	99.0
+7	Spectrogram 1	1	240.0	243.0	0	12000	Red-whiskered Bulbul	rewbul	0.2259	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	240.0
+8	Spectrogram 1	1	243.0	246.0	0	12000	Red-whiskered Bulbul	rewbul	0.4459	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_170000.wav	243.0

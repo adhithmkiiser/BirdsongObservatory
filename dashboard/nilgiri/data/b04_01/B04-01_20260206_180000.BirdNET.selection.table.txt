@@ -1,0 +1,11 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	45.0	48.0	0	12000	Large-billed Crow	labcro1	0.1944	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	45.0
+2	Spectrogram 1	1	63.0	66.0	0	12000	Indian White-eye	indwhe1	0.5468	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	63.0
+3	Spectrogram 1	1	63.0	66.0	0	12000	Large-billed Crow	labcro1	0.1239	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	63.0
+4	Spectrogram 1	1	147.0	150.0	0	12000	Large-billed Crow	labcro1	0.2954	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	147.0
+5	Spectrogram 1	1	165.0	168.0	0	12000	Large-billed Crow	labcro1	0.2298	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	165.0
+6	Spectrogram 1	1	183.0	186.0	0	12000	Large-billed Crow	labcro1	0.6734	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	183.0
+7	Spectrogram 1	1	186.0	189.0	0	12000	Large-billed Crow	labcro1	0.2348	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	186.0
+8	Spectrogram 1	1	270.0	273.0	0	12000	Large-billed Crow	labcro1	0.2663	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	270.0
+9	Spectrogram 1	1	279.0	282.0	0	12000	Large-billed Crow	labcro1	0.2064	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	279.0
+10	Spectrogram 1	1	288.0	291.0	0	12000	Large-billed Crow	labcro1	0.3017	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_180000.wav	288.0

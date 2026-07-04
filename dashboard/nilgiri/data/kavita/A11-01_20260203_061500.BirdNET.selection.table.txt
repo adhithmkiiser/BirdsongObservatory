@@ -1,0 +1,2 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	102.0	105.0	0	12000	Tickell's Blue Flycatcher	tibfly3	0.5916	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260203_061500.wav	102.0

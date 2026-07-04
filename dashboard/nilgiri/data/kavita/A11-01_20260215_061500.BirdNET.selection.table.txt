@@ -1,0 +1,14 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	9.0	12.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.1389	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	9.0
+2	Spectrogram 1	1	36.0	39.0	0	12000	Puff-throated Babbler	putbab1	0.4903	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	36.0
+3	Spectrogram 1	1	45.0	48.0	0	12000	Gray Junglefowl	grejun2	0.3869	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	45.0
+4	Spectrogram 1	1	48.0	51.0	0	12000	Puff-throated Babbler	putbab1	0.1148	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	48.0
+5	Spectrogram 1	1	75.0	78.0	0	12000	Puff-throated Babbler	putbab1	0.2951	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	75.0
+6	Spectrogram 1	1	150.0	153.0	0	12000	Indian White-eye	indwhe1	0.1119	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	150.0
+7	Spectrogram 1	1	180.0	183.0	0	12000	Puff-throated Babbler	putbab1	0.2996	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	180.0
+8	Spectrogram 1	1	210.0	213.0	0	12000	Indian White-eye	indwhe1	0.3416	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	210.0
+9	Spectrogram 1	1	219.0	222.0	0	12000	Puff-throated Babbler	putbab1	0.1814	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	219.0
+10	Spectrogram 1	1	219.0	222.0	0	12000	Brown-cheeked Fulvetta	brcful1	0.1262	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	219.0
+11	Spectrogram 1	1	228.0	231.0	0	12000	Puff-throated Babbler	putbab1	0.1213	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	228.0
+12	Spectrogram 1	1	261.0	264.0	0	12000	Indian White-eye	indwhe1	0.4452	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	261.0
+13	Spectrogram 1	1	264.0	267.0	0	12000	Puff-throated Babbler	putbab1	0.3602	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260215_061500.wav	264.0

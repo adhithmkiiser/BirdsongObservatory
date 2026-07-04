@@ -1,0 +1,5 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	0.0	3.0	0	12000	Red-whiskered Bulbul	rewbul	0.5271	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_170000.wav	0.0
+2	Spectrogram 1	1	99.0	102.0	0	12000	Common Crane	comcra	0.1392	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_170000.wav	99.0
+3	Spectrogram 1	1	123.0	126.0	0	12000	Rock Pigeon	rocpig	0.2264	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_170000.wav	123.0
+4	Spectrogram 1	1	174.0	177.0	0	12000	Common Crane	comcra	0.1584	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_170000.wav	174.0

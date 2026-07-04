@@ -1,0 +1,33 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	36.0	39.0	0	12000	Red-whiskered Bulbul	rewbul	0.1599	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	36.0
+2	Spectrogram 1	1	45.0	48.0	0	12000	Large-billed Crow	labcro1	0.7576	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	45.0
+3	Spectrogram 1	1	48.0	51.0	0	12000	Large-billed Crow	labcro1	0.1708	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	48.0
+4	Spectrogram 1	1	60.0	63.0	0	12000	Large-billed Crow	labcro1	0.1199	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	60.0
+5	Spectrogram 1	1	63.0	66.0	0	12000	Large-billed Crow	labcro1	0.8107	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	63.0
+6	Spectrogram 1	1	72.0	75.0	0	12000	Red-whiskered Bulbul	rewbul	0.1160	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	72.0
+7	Spectrogram 1	1	75.0	78.0	0	12000	Large-billed Crow	labcro1	0.1344	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	75.0
+8	Spectrogram 1	1	78.0	81.0	0	12000	Large-billed Crow	labcro1	0.7840	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	78.0
+9	Spectrogram 1	1	96.0	99.0	0	12000	Large-billed Crow	labcro1	0.4888	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	96.0
+10	Spectrogram 1	1	102.0	105.0	0	12000	Little Ringed Plover	lirplo	0.3671	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	102.0
+11	Spectrogram 1	1	129.0	132.0	0	12000	Red-whiskered Bulbul	rewbul	0.1364	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	129.0
+12	Spectrogram 1	1	138.0	141.0	0	12000	Greater Coucal	grecou1	0.5348	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	138.0
+13	Spectrogram 1	1	144.0	147.0	0	12000	Greater Coucal	grecou1	0.9042	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	144.0
+14	Spectrogram 1	1	150.0	153.0	0	12000	Red-whiskered Bulbul	rewbul	0.1227	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	150.0
+15	Spectrogram 1	1	222.0	225.0	0	12000	Large-billed Crow	labcro1	0.1767	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	222.0
+16	Spectrogram 1	1	225.0	228.0	0	12000	Large-billed Crow	labcro1	0.6890	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	225.0
+17	Spectrogram 1	1	234.0	237.0	0	12000	Large-billed Crow	labcro1	0.8214	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	234.0
+18	Spectrogram 1	1	246.0	249.0	0	12000	Large-billed Crow	labcro1	0.8393	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	246.0
+19	Spectrogram 1	1	252.0	255.0	0	12000	Red-whiskered Bulbul	rewbul	0.1951	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	252.0
+20	Spectrogram 1	1	258.0	261.0	0	12000	White-cheeked Barbet	whcbar1	0.7599	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	258.0
+21	Spectrogram 1	1	267.0	270.0	0	12000	Red-whiskered Bulbul	rewbul	0.2410	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	267.0
+22	Spectrogram 1	1	270.0	273.0	0	12000	Gray Junglefowl	grejun2	0.1552	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	270.0
+23	Spectrogram 1	1	270.0	273.0	0	12000	White-cheeked Barbet	whcbar1	0.1419	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	270.0
+24	Spectrogram 1	1	273.0	276.0	0	12000	White-cheeked Barbet	whcbar1	0.1284	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	273.0
+25	Spectrogram 1	1	273.0	276.0	0	12000	Red-whiskered Bulbul	rewbul	0.1159	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	273.0
+26	Spectrogram 1	1	276.0	279.0	0	12000	White-cheeked Barbet	whcbar1	0.3308	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	276.0
+27	Spectrogram 1	1	279.0	282.0	0	12000	White-cheeked Barbet	whcbar1	0.1725	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	279.0
+28	Spectrogram 1	1	279.0	282.0	0	12000	Red-whiskered Bulbul	rewbul	0.1299	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	279.0
+29	Spectrogram 1	1	282.0	285.0	0	12000	White-cheeked Barbet	whcbar1	0.9686	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	282.0
+30	Spectrogram 1	1	285.0	288.0	0	12000	White-cheeked Barbet	whcbar1	0.8629	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	285.0
+31	Spectrogram 1	1	288.0	291.0	0	12000	White-cheeked Barbet	whcbar1	0.9394	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	288.0
+32	Spectrogram 1	1	291.0	294.0	0	12000	White-cheeked Barbet	whcbar1	0.3869	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_174500.wav	291.0

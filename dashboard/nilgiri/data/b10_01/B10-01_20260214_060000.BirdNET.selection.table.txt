@@ -1,0 +1,9 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	6.0	9.0	0	12000	Large-billed Crow	labcro1	0.1896	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	6.0
+2	Spectrogram 1	1	12.0	15.0	0	12000	Large-billed Crow	labcro1	0.1795	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	12.0
+3	Spectrogram 1	1	30.0	33.0	0	12000	Large-billed Crow	labcro1	0.2314	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	30.0
+4	Spectrogram 1	1	33.0	36.0	0	12000	Large-billed Crow	labcro1	0.1592	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	33.0
+5	Spectrogram 1	1	36.0	39.0	0	12000	Large-billed Crow	labcro1	0.3666	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	36.0
+6	Spectrogram 1	1	45.0	48.0	0	12000	Large-billed Crow	labcro1	0.1861	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	45.0
+7	Spectrogram 1	1	48.0	51.0	0	12000	Large-billed Crow	labcro1	0.1136	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	48.0
+8	Spectrogram 1	1	75.0	78.0	0	12000	Eurasian Collared-Dove	eucdov	0.2803	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260214_060000.wav	75.0

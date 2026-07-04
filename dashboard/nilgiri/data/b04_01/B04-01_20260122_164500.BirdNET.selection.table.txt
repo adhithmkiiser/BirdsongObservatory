@@ -1,0 +1,2 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	297.0	300.0	0	12000	Indian White-eye	indwhe1	0.2669	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260122_164500.wav	297.0

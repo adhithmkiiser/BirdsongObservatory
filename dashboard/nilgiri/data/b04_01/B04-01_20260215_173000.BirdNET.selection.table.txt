@@ -1,0 +1,20 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	15.0	18.0	0	12000	Ruddy Shelduck	rudshe	0.3106	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	15.0
+2	Spectrogram 1	1	84.0	87.0	0	12000	Common Hawk-Cuckoo	cohcuc1	0.1730	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	84.0
+3	Spectrogram 1	1	96.0	99.0	0	12000	Indian White-eye	indwhe1	0.1246	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	96.0
+4	Spectrogram 1	1	102.0	105.0	0	12000	Common Crane	comcra	0.5697	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	102.0
+5	Spectrogram 1	1	108.0	111.0	0	12000	Indian White-eye	indwhe1	0.1739	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	108.0
+6	Spectrogram 1	1	108.0	111.0	0	12000	Pied Bushchat	piebus1	0.1638	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	108.0
+7	Spectrogram 1	1	111.0	114.0	0	12000	Indian White-eye	indwhe1	0.5061	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	111.0
+8	Spectrogram 1	1	120.0	123.0	0	12000	Indian White-eye	indwhe1	0.1304	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	120.0
+9	Spectrogram 1	1	123.0	126.0	0	12000	Indian White-eye	indwhe1	0.6373	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	123.0
+10	Spectrogram 1	1	168.0	171.0	0	12000	Greenish Warbler	grewar3	0.1081	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	168.0
+11	Spectrogram 1	1	186.0	189.0	0	12000	Indian White-eye	indwhe1	0.6671	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	186.0
+12	Spectrogram 1	1	189.0	192.0	0	12000	Indian White-eye	indwhe1	0.3164	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	189.0
+13	Spectrogram 1	1	192.0	195.0	0	12000	Indian White-eye	indwhe1	0.8129	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	192.0
+14	Spectrogram 1	1	201.0	204.0	0	12000	Indian White-eye	indwhe1	0.5849	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	201.0
+15	Spectrogram 1	1	201.0	204.0	0	12000	Dunlin	dunlin	0.1103	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	201.0
+16	Spectrogram 1	1	222.0	225.0	0	12000	Indian White-eye	indwhe1	0.1232	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	222.0
+17	Spectrogram 1	1	234.0	237.0	0	12000	Indian White-eye	indwhe1	0.1355	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	234.0
+18	Spectrogram 1	1	237.0	240.0	0	12000	Scaly-breasted Munia	nutman	0.7472	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	237.0
+19	Spectrogram 1	1	237.0	240.0	0	12000	Indian White-eye	indwhe1	0.1096	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_173000.wav	237.0

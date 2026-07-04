@@ -1,0 +1,5 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	108.0	111.0	0	12000	Indian Scimitar-Babbler	insbab1	0.7037	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260203_170000.wav	108.0
+2	Spectrogram 1	1	120.0	123.0	0	12000	Indian Scimitar-Babbler	insbab1	0.9117	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260203_170000.wav	120.0
+3	Spectrogram 1	1	156.0	159.0	0	12000	Indian Scimitar-Babbler	insbab1	0.9733	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260203_170000.wav	156.0
+4	Spectrogram 1	1	165.0	168.0	0	12000	Indian Scimitar-Babbler	insbab1	0.8908	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260203_170000.wav	165.0

@@ -1,0 +1,5 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	81.0	84.0	0	12000	Osprey	osprey	0.1161	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_183000.wav	81.0
+2	Spectrogram 1	1	195.0	198.0	0	12000	Black-crowned Night-Heron	bcnher	0.1485	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_183000.wav	195.0
+3	Spectrogram 1	1	237.0	240.0	0	12000	Indian Scimitar-Babbler	insbab1	0.1703	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_183000.wav	237.0
+4	Spectrogram 1	1	279.0	282.0	0	12000	Large-billed Crow	labcro1	0.1007	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_183000.wav	279.0

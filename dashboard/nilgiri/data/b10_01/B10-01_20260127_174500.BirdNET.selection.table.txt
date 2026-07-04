@@ -1,0 +1,27 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	6.0	9.0	0	12000	Indian White-eye	indwhe1	0.2335	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	6.0
+2	Spectrogram 1	1	15.0	18.0	0	12000	Indian White-eye	indwhe1	0.3871	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	15.0
+3	Spectrogram 1	1	54.0	57.0	0	12000	Indian White-eye	indwhe1	0.1046	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	54.0
+4	Spectrogram 1	1	60.0	63.0	0	12000	Indian White-eye	indwhe1	0.1409	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	60.0
+5	Spectrogram 1	1	60.0	63.0	0	12000	Large-billed Crow	labcro1	0.1045	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	60.0
+6	Spectrogram 1	1	123.0	126.0	0	12000	Large-billed Crow	labcro1	0.1040	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	123.0
+7	Spectrogram 1	1	177.0	180.0	0	12000	Indian White-eye	indwhe1	0.3406	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	177.0
+8	Spectrogram 1	1	186.0	189.0	0	12000	Indian White-eye	indwhe1	0.1298	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	186.0
+9	Spectrogram 1	1	255.0	258.0	0	12000	Green Warbler	grnwar1	0.4213	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	255.0
+10	Spectrogram 1	1	255.0	258.0	0	12000	Greenish Warbler	grewar3	0.1911	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	255.0
+11	Spectrogram 1	1	267.0	270.0	0	12000	Green Warbler	grnwar1	0.3415	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	267.0
+12	Spectrogram 1	1	267.0	270.0	0	12000	Greenish Warbler	grewar3	0.1786	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	267.0
+13	Spectrogram 1	1	270.0	273.0	0	12000	Gray Junglefowl	grejun2	0.1140	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	270.0
+14	Spectrogram 1	1	276.0	279.0	0	12000	Green Warbler	grnwar1	0.4807	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	276.0
+15	Spectrogram 1	1	276.0	279.0	0	12000	Greenish Warbler	grewar3	0.3582	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	276.0
+16	Spectrogram 1	1	282.0	285.0	0	12000	Green Warbler	grnwar1	0.3317	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	282.0
+17	Spectrogram 1	1	282.0	285.0	0	12000	Greenish Warbler	grewar3	0.2312	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	282.0
+18	Spectrogram 1	1	285.0	288.0	0	12000	Green Warbler	grnwar1	0.5977	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	285.0
+19	Spectrogram 1	1	285.0	288.0	0	12000	Greenish Warbler	grewar3	0.2793	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	285.0
+20	Spectrogram 1	1	288.0	291.0	0	12000	Green Warbler	grnwar1	0.2119	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	288.0
+21	Spectrogram 1	1	288.0	291.0	0	12000	Greenish Warbler	grewar3	0.1569	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	288.0
+22	Spectrogram 1	1	288.0	291.0	0	12000	Indian White-eye	indwhe1	0.1145	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	288.0
+23	Spectrogram 1	1	291.0	294.0	0	12000	Green Warbler	grnwar1	0.5750	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	291.0
+24	Spectrogram 1	1	291.0	294.0	0	12000	Greenish Warbler	grewar3	0.1473	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	291.0
+25	Spectrogram 1	1	294.0	297.0	0	12000	Green Warbler	grnwar1	0.6793	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	294.0
+26	Spectrogram 1	1	294.0	297.0	0	12000	Greenish Warbler	grewar3	0.5093	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_174500.wav	294.0

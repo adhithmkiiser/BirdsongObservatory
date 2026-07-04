@@ -1,0 +1,8 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	27.0	30.0	0	12000	Red-whiskered Bulbul	rewbul	0.1187	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_171500.wav	27.0
+2	Spectrogram 1	1	54.0	57.0	0	12000	Red-whiskered Bulbul	rewbul	0.1180	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_171500.wav	54.0
+3	Spectrogram 1	1	150.0	153.0	0	12000	Green Warbler	grnwar1	0.3807	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_171500.wav	150.0
+4	Spectrogram 1	1	201.0	204.0	0	12000	Tree Pipit	trepip	0.3428	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_171500.wav	201.0
+5	Spectrogram 1	1	246.0	249.0	0	12000	Indian Scimitar-Babbler	insbab1	0.1002	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_171500.wav	246.0
+6	Spectrogram 1	1	252.0	255.0	0	12000	Indian Scimitar-Babbler	insbab1	0.1401	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_171500.wav	252.0
+7	Spectrogram 1	1	264.0	267.0	0	12000	Indian Scimitar-Babbler	insbab1	0.5551	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260206_171500.wav	264.0

@@ -1,0 +1,25 @@
+Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
+1	Spectrogram 1	1	9.0	12.0	0	12000	Large-billed Crow	labcro1	0.1131	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	9.0
+2	Spectrogram 1	1	93.0	96.0	0	12000	Indian Golden Oriole	ingori1	0.1481	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	93.0
+3	Spectrogram 1	1	96.0	99.0	0	12000	Gray Junglefowl	grejun2	0.1117	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	96.0
+4	Spectrogram 1	1	99.0	102.0	0	12000	Gray Junglefowl	grejun2	0.1032	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	99.0
+5	Spectrogram 1	1	102.0	105.0	0	12000	Indian Scimitar-Babbler	insbab1	0.2855	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	102.0
+6	Spectrogram 1	1	156.0	159.0	0	12000	Indian White-eye	indwhe1	0.2312	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	156.0
+7	Spectrogram 1	1	162.0	165.0	0	12000	Gray Junglefowl	grejun2	0.1448	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	162.0
+8	Spectrogram 1	1	168.0	171.0	0	12000	Gray Junglefowl	grejun2	0.1302	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	168.0
+9	Spectrogram 1	1	180.0	183.0	0	12000	Indian White-eye	indwhe1	0.2191	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	180.0
+10	Spectrogram 1	1	180.0	183.0	0	12000	Large-billed Crow	labcro1	0.1131	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	180.0
+11	Spectrogram 1	1	189.0	192.0	0	12000	Indian Pitta	indpit1	0.4922	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	189.0
+12	Spectrogram 1	1	204.0	207.0	0	12000	Large-billed Crow	labcro1	0.7784	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	204.0
+13	Spectrogram 1	1	207.0	210.0	0	12000	Indian Pitta	indpit1	0.2121	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	207.0
+14	Spectrogram 1	1	210.0	213.0	0	12000	Large-billed Crow	labcro1	0.4523	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	210.0
+15	Spectrogram 1	1	213.0	216.0	0	12000	Large-billed Crow	labcro1	0.3390	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	213.0
+16	Spectrogram 1	1	228.0	231.0	0	12000	Gray Junglefowl	grejun2	0.1119	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	228.0
+17	Spectrogram 1	1	234.0	237.0	0	12000	Gray Junglefowl	grejun2	0.3818	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	234.0
+18	Spectrogram 1	1	234.0	237.0	0	12000	Malabar Whistling-Thrush	mawthr1	0.1946	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	234.0
+19	Spectrogram 1	1	243.0	246.0	0	12000	Gray Junglefowl	grejun2	0.1730	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	243.0
+20	Spectrogram 1	1	252.0	255.0	0	12000	Yellow-browed Bulbul	yebbul3	0.1243	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	252.0
+21	Spectrogram 1	1	252.0	255.0	0	12000	Southern Hill Myna	sohmyn1	0.1137	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	252.0
+22	Spectrogram 1	1	255.0	258.0	0	12000	Gray Junglefowl	grejun2	0.1418	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	255.0
+23	Spectrogram 1	1	279.0	282.0	0	12000	Large-billed Crow	labcro1	0.1177	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	279.0
+24	Spectrogram 1	1	294.0	297.0	0	12000	Large-billed Crow	labcro1	0.1098	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260205_163000.wav	294.0
