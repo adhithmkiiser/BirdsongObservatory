@@ -486,6 +486,17 @@ export default defineConfig({
       allow: ['..']
     }
   },
+  resolve: {
+    alias: {
+      'react': path.resolve(__dirname, 'node_modules/react'),
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+      'lucide-react': path.resolve(__dirname, 'node_modules/lucide-react'),
+      'echarts-for-react': path.resolve(__dirname, 'node_modules/echarts-for-react'),
+      'echarts': path.resolve(__dirname, 'node_modules/echarts'),
+      'react-leaflet': path.resolve(__dirname, 'node_modules/react-leaflet'),
+      'leaflet': path.resolve(__dirname, 'node_modules/leaflet')
+    }
+  },
   build: {
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
