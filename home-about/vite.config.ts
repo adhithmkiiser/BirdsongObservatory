@@ -485,5 +485,16 @@ export default defineConfig({
     fs: {
       allow: ['..']
     }
+  },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          echarts: ['echarts', 'echarts-for-react'],
+          vendor: ['react', 'react-dom', 'leaflet', 'react-leaflet', 'lucide-react']
+        }
+      }
+    }
   }
 })
