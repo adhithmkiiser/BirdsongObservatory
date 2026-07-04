@@ -53,7 +53,7 @@ const normalizeSiteId = (name: string): string => {
 
 const AdminDashboard: React.FC = () => {
   // Navigation tabs
-  const [activeTab, setActiveTab] = useState<'content' | 'projects' | 'species' | 'users' | 'files' | 'backup'>('content');
+  const [activeTab, setActiveTab] = useState<'content' | 'projects' | 'species' | 'users' | 'files'>('content');
   const [successMsg, setSuccessMsg] = useState('');
 
   // 1. Manage Content states
@@ -812,13 +812,6 @@ const AdminDashboard: React.FC = () => {
           >
             <Upload className="tab-btn-icon" />
             Import CSV Detections
-          </button>
-          <button 
-            className={`admin-nav-tab-btn ${activeTab === 'backup' ? 'active' : ''}`}
-            onClick={() => setActiveTab('backup')}
-          >
-            <Download className="tab-btn-icon" />
-            Backup &amp; Restore
           </button>
         </aside>
 
@@ -1993,105 +1986,6 @@ const AdminDashboard: React.FC = () => {
                     Select a target Project and Site folder above to view inventory.
                   </div>
                 )}
-              </div>
-            </div>
-          )}
-
-          {/* TAB: BACKUP & RESTORE */}
-          {activeTab === 'backup' && (
-            <div className="admin-tab-card">
-              <div className="card-header-bar">
-                <h2>Backup &amp; Restore</h2>
-                <p>Export all your project data, sites, species metadata, and settings to a JSON file. Use it to restore after a browser cache clear or to move data to another device.</p>
-              </div>
-
-              {/* Export */}
-              <div style={{ background: '#f8fafc', border: '1px solid var(--border-color)', borderRadius: '12px', padding: '2rem', marginBottom: '2rem' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <Download size={18} /> Export Data
-                </h3>
-                <p style={{ fontSize: '0.875rem', color: 'var(--text-light)', marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                  Downloads a <code>birdsong_backup.json</code> file containing all projects, sites, species metadata, user accounts, visibility settings, and page content stored in this browser. Keep this file safe as your recovery point.
-                </p>
-                <button
-                  className="btn btn-primary"
-                  onClick={() => {
-                    const KEYS = [
-                      'projects', 'sites', 'species_list', 'species_metadata',
-                      'userAccounts', 'dashboardVisibility', 'audioLogs',
-                      'homeIntroText',
-                      'aboutMissionHeading','aboutMissionText1','aboutMissionText2',
-                      'aboutWhyHeading','aboutWhyText1','aboutWhyText2',
-                      'aboutBullet1','aboutBullet2','aboutBullet3','aboutBullet4',
-                      'aboutSideTitle1','aboutSideTitle2','aboutSideText1','aboutSideText2',
-                      'aboutSideImg','aboutSideImgCaption',
-                      'workflowStepTitle1','workflowStepTitle2','workflowStepTitle3','workflowStepTitle4',
-                      'workflowStepDesc1','workflowStepDesc2','workflowStepDesc3','workflowStepDesc4'
-                    ];
-                    const backup: Record<string, any> = { _version: 1, _date: new Date().toISOString() };
-                    KEYS.forEach(k => {
-                      const v = localStorage.getItem(k);
-                      if (v !== null) backup[k] = v;
-                    });
-                    const blob = new Blob([JSON.stringify(backup, null, 2)], { type: 'application/json' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `birdsong_backup_${new Date().toISOString().slice(0,10)}.json`;
-                    a.click();
-                    URL.revokeObjectURL(url);
-                  }}
-                >
-                  <Download size={16} /> Download Backup JSON
-                </button>
-              </div>
-
-              {/* Import */}
-              <div style={{ background: '#f8fafc', border: '1px solid var(--border-color)', borderRadius: '12px', padding: '2rem' }}>
-                <h3 style={{ fontSize: '1rem', fontWeight: 800, color: 'var(--text-main)', marginBottom: '0.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <RefreshCw size={18} /> Restore from Backup
-                </h3>
-                <p style={{ fontSize: '0.875rem', color: 'var(--text-light)', marginBottom: '1.5rem', lineHeight: 1.5 }}>
-                  Select a previously downloaded <code>birdsong_backup_*.json</code> file to restore all your data. <strong style={{ color: '#dc2626' }}>This will overwrite your current data.</strong> Refresh the page after restoring.
-                </p>
-                <div style={{ display: 'flex', gap: '1rem', alignItems: 'center', flexWrap: 'wrap' }}>
-                  <label
-                    style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', padding: '0.6rem 1.4rem', backgroundColor: '#fff', border: '2px solid #4f46e5', borderRadius: '8px', fontWeight: 700, fontSize: '0.875rem', color: '#4f46e5', cursor: 'pointer', fontFamily: 'Inter' }}
-                  >
-                    <Upload size={16} /> Choose Backup File
-                    <input
-                      type="file"
-                      accept=".json"
-                      style={{ display: 'none' }}
-                      onChange={(e) => {
-                        const file = e.target.files?.[0];
-                        if (!file) return;
-                        const reader = new FileReader();
-                        reader.onload = (ev) => {
-                          try {
-                            const backup = JSON.parse(ev.target?.result as string);
-                            if (!backup._version) { alert('Invalid backup file.'); return; }
-                            const { _version, _date, ...data } = backup;
-                            Object.entries(data).forEach(([k, v]) => {
-                              localStorage.setItem(k, v as string);
-                            });
-                            alert(`✅ Backup from ${_date?.slice(0,10) ?? 'unknown date'} restored successfully!\n\nPlease refresh the page to see your data.`);
-                          } catch {
-                            alert('❌ Failed to parse backup file. Make sure it is a valid birdsong_backup.json file.');
-                          }
-                        };
-                        reader.readAsText(file);
-                        e.target.value = '';
-                      }}
-                    />
-                  </label>
-                  <span style={{ fontSize: '0.8rem', color: 'var(--text-light)' }}>Accepted format: <code>.json</code> (Birdsong Observatory backup only)</span>
-                </div>
-              </div>
-
-              {/* Tips */}
-              <div style={{ marginTop: '2rem', padding: '1rem 1.5rem', background: '#ede9fe', borderRadius: '10px', borderLeft: '4px solid #4f46e5', fontSize: '0.85rem', color: '#4c1d95', lineHeight: 1.6 }}>
-                <strong>💡 Tip:</strong> Export a fresh backup every time you add a new project, upload new BirdNET data, or edit species metadata. Store the file in your Google Drive or email it to yourself as a safety net.
               </div>
             </div>
           )}
