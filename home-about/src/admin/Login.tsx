@@ -221,6 +221,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
               <button type="submit" className="btn btn-primary login-btn">
                 Sign In
               </button>
+            </form>
           </>
         )}
 
