@@ -490,9 +490,13 @@ export default defineConfig({
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
       output: {
-        manualChunks: {
-          echarts: ['echarts', 'echarts-for-react'],
-          vendor: ['react', 'react-dom', 'leaflet', 'react-leaflet', 'lucide-react']
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('echarts')) return 'echarts';
+            if (id.includes('leaflet')) return 'leaflet';
+            if (id.includes('react') || id.includes('lucide')) return 'react-vendor';
+            return 'vendor';
+          }
         }
       }
     }
