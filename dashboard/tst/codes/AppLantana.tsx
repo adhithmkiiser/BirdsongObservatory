@@ -11,7 +11,8 @@ import BirdSearch from './BirdSearch';
 import type { AggregatedData, Recorder } from './types';
 import FooterLantana from './FooterLantana';
 
-// Load preprocessed JSON data
+import 'leaflet/dist/leaflet.css';
+import { supabase } from '../../../home-about/src/supabaseClient';
 import dataRawDefault from '../data/data.json';
 
 interface AppLantanaProps {
@@ -46,13 +47,20 @@ const AppLantana: React.FC<AppLantanaProps> = ({ projectId = 'tst-lantana', hide
   const [recorders, setRecorders] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch('/api/get-dashboard-data', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ projectId })
-    })
-      .then(res => res.json())
-      .then((rawJson: any) => {
+    const fetchDashboardData = async () => {
+      try {
+        const { data: fileData, error } = await supabase
+          .storage
+          .from('observatory-data')
+          .download(`${projectId}/data.json`);
+
+        if (error || !fileData) {
+          throw new Error('Failed to download data.json');
+        }
+
+        const text = await fileData.text();
+        const rawJson = JSON.parse(text);
+        
         const typedData = rawJson as AggregatedData;
         setData(typedData);
 
@@ -85,8 +93,7 @@ const AppLantana: React.FC<AppLantanaProps> = ({ projectId = 'tst-lantana', hide
         } else {
           setRecorders(typedData.recorders);
         }
-      })
-      .catch(err => {
+      } catch (err) {
         console.error('Failed to load dynamic project data', err);
         // Fallback to default
         const typedData = dataRawDefault as unknown as AggregatedData;
@@ -94,7 +101,9 @@ const AppLantana: React.FC<AppLantanaProps> = ({ projectId = 'tst-lantana', hide
         setSpeciesList(typedData.species_list);
         setSpeciesMetadata(typedData.species_metadata);
         setRecorders(typedData.recorders);
-      });
+      }
+    };
+    fetchDashboardData();
   }, [projectId]);
 
   useEffect(() => {

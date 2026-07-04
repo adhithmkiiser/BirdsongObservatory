@@ -3,123 +3,159 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { supabase } from './supabaseClient.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-// Root workspace folder (BirdsongObservatory)
 const rootDir = path.resolve(__dirname, '..');
 
 const app = express();
 const PORT = process.env.PORT || 10000;
 
 app.use(cors());
-app.use(express.json({ limit: '500mb' })); // Support large BirdNET files
+app.use(express.json({ limit: '500mb' }));
 app.use(express.urlencoded({ extended: true, limit: '500mb' }));
 
-// 1. Create Project folders
-app.post('/api/create-project', (req, res) => {
-  try {
-    const projId = req.body.projectId;
-    if (!projId) throw new Error('Missing projectId');
+// Helper to fully rebuild data.json by fetching all files from Supabase
+async function rebuildDataJson(projectId) {
+  let currentData = { base_date: "2026-01-11", recorders: [], species_list: [], species_metadata: {}, detections: [] };
+  const baseDate = new Date(currentData.base_date);
 
-    const projDir = path.join(rootDir, 'dashboard', projId);
-    const dataDir = path.join(projDir, 'data');
-    const locationDir = path.join(projDir, 'Location');
+  // 1. Get all sites (folders) in this project
+  const { data: sites } = await supabase.storage.from('observatory-data').list(projectId);
+  if (!sites) return;
 
-    if (!fs.existsSync(projDir)) fs.mkdirSync(projDir, { recursive: true });
-    if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
-    if (!fs.existsSync(locationDir)) fs.mkdirSync(locationDir, { recursive: true });
+  for (const site of sites) {
+    if (!site.id) continue; // Skip files, we only want folders (sites)
+    
+    const siteId = site.name;
+    const { data: files } = await supabase.storage.from('observatory-data').list(`${projectId}/${siteId}`);
+    if (!files) continue;
 
-    const tstCodesDir = path.join(rootDir, 'dashboard', 'tst', 'codes');
-    const destCodesDir = path.join(projDir, 'codes');
-    if (fs.existsSync(tstCodesDir) && !fs.existsSync(destCodesDir)) {
-      fs.mkdirSync(destCodesDir, { recursive: true });
-      fs.readdirSync(tstCodesDir).forEach(file => {
-        fs.copyFileSync(path.join(tstCodesDir, file), path.join(destCodesDir, file));
-      });
+    for (const file of files) {
+      if (file.name.endsWith('.txt') || file.name.endsWith('.csv')) {
+        const { data: fileData } = await supabase.storage.from('observatory-data').download(`${projectId}/${siteId}/${file.name}`);
+        if (!fileData) continue;
+        
+        const content = await fileData.text();
+        const isTab = file.name.endsWith('.txt');
+        const lines = content.split(/\r?\n/);
+        
+        if (lines.length > 1) {
+          const delimiter = isTab ? '\t' : ',';
+          const headers = lines[0].split(delimiter).map(h => h.trim().replace(/^"|"$/g, ''));
+          const commonNameIdx = headers.findIndex(h => h.toLowerCase() === 'common name' || h.toLowerCase() === 'common_name');
+          const sciNameIdx = headers.findIndex(h => h.toLowerCase() === 'scientific name' || h.toLowerCase() === 'scientific_name' || h.toLowerCase() === 'species');
+          const confIdx = headers.findIndex(h => h.toLowerCase() === 'confidence');
+
+          const parts = file.name.split('_');
+          let fileDate = new Date();
+          let hour = 0;
+          if (parts.length >= 3) {
+            const dateStr = parts[1];
+            const timeStr = parts[2];
+            if (dateStr.length === 8) {
+              fileDate = new Date(parseInt(dateStr.substring(0, 4)), parseInt(dateStr.substring(4, 6)) - 1, parseInt(dateStr.substring(6, 8)));
+            }
+            if (timeStr.length >= 2) {
+              hour = parseInt(timeStr.substring(0, 2), 10);
+            }
+          }
+
+          const dateOffset = Math.round((fileDate.getTime() - baseDate.getTime()) / (1000 * 60 * 60 * 24));
+          const recKey = siteId;
+          let rIdx = currentData.recorders.findIndex(r => r.site_group === siteId);
+          if (rIdx === -1) {
+            currentData.recorders.push({ site_group: siteId, recorder_id: siteId, habitat: 'LC', actual_files: 0 });
+            rIdx = currentData.recorders.length - 1;
+          }
+          currentData.recorders[rIdx].actual_files += 1;
+
+          for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+
+            let cols = [];
+            if (isTab) {
+              cols = line.split('\t').map(c => c.trim().replace(/^"|"$/g, ''));
+            } else {
+              let insideQuote = false, entry = '';
+              for (let j = 0; j < line.length; j++) {
+                const char = line[j];
+                if (char === '"') insideQuote = !insideQuote;
+                else if (char === ',' && !insideQuote) { cols.push(entry.trim().replace(/^"|"$/g, '')); entry = ''; }
+                else entry += char;
+              }
+              cols.push(entry.trim().replace(/^"|"$/g, ''));
+            }
+
+            if (cols.length < Math.max(commonNameIdx, sciNameIdx, confIdx) + 1) continue;
+
+            const commonName = commonNameIdx !== -1 ? cols[commonNameIdx] : '';
+            const scientificName = sciNameIdx !== -1 ? cols[sciNameIdx] : '';
+            const confidence = confIdx !== -1 ? parseFloat(cols[confIdx]) : 0;
+
+            if (commonName && !isNaN(confidence) && confidence >= 0.1 && commonName.toLowerCase() !== 'common crane') {
+              let spIdx = currentData.species_list.indexOf(commonName);
+              if (spIdx === -1) {
+                currentData.species_list.push(commonName);
+                spIdx = currentData.species_list.length - 1;
+                currentData.species_metadata[commonName] = {
+                  scientific: scientificName, endemic: 'No', iucn: 'LC'
+                };
+              }
+              currentData.detections.push([rIdx, spIdx, dateOffset, hour, Math.round(confidence * 100)]);
+            }
+          }
+        }
+      }
     }
+  }
 
-    res.json({ success: true, message: `Created project directory dashboard/${projId}` });
+  await supabase.storage.from('observatory-data').upload(`${projectId}/data.json`, JSON.stringify(currentData), { upsert: true });
+}
+
+// 1. Create Project
+app.post('/api/create-project', async (req, res) => {
+  try {
+    const { projectId } = req.body;
+    if (!projectId) throw new Error('Missing projectId');
+    const { error } = await supabase.from('projects').insert([{ id: projectId, name: projectId }]);
+    if (error && error.code !== '23505') throw error;
+    res.json({ success: true, message: `Created project ${projectId}` });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-// 2. Create Site folder
-app.post('/api/create-site', (req, res) => {
+// 2. Create Site
+app.post('/api/create-site', async (req, res) => {
   try {
     const { projectId, siteId } = req.body;
     if (!projectId || !siteId) throw new Error('Missing projectId or siteId');
-
-    const resolvedProjId = projectId === 'tst-lantana' ? 'tst' : projectId;
-    const resolvedSiteId = projectId === 'tst-lantana' ? siteId.toUpperCase() : siteId;
-
-    const siteDir = resolvedProjId === 'tst'
-      ? path.join(rootDir, 'dashboard', 'tst', 'data', 'DATA', resolvedSiteId)
-      : path.join(rootDir, 'dashboard', resolvedProjId, 'data', resolvedSiteId);
-
-    if (!fs.existsSync(siteDir)) {
-      fs.mkdirSync(siteDir, { recursive: true });
-    }
-
-    res.json({ success: true, message: `Created site folder: ${siteDir}` });
+    const { error } = await supabase.from('sites').insert([{ id: siteId, project_id: projectId, name: siteId }]);
+    if (error && error.code !== '23505') throw error;
+    res.json({ success: true, message: `Created site ${siteId}` });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
   }
 });
 
-// 3. Upload File to Site data folder
-app.post('/api/upload-file', (req, res) => {
+// 3. Upload File
+app.post('/api/upload-file', async (req, res) => {
   try {
     const { projectId, siteId, filename, content } = req.body;
     if (!projectId || !siteId || !filename || content === undefined) {
       throw new Error('Missing parameters');
     }
 
-    const resolvedProjId = projectId === 'tst-lantana' ? 'tst' : projectId;
-    const resolvedSiteId = projectId === 'tst-lantana' ? siteId.toUpperCase() : siteId;
+    // Save raw file to Supabase Storage
+    const storagePath = `${projectId}/${siteId}/${filename}`;
+    const { error: uploadError } = await supabase.storage.from('observatory-data').upload(storagePath, content, { upsert: true });
+    if (uploadError) throw uploadError;
 
-    const baseSiteDir = resolvedProjId === 'tst'
-      ? path.join(rootDir, 'dashboard', 'tst', 'data', 'DATA', resolvedSiteId)
-      : path.join(rootDir, 'dashboard', resolvedProjId, 'data', resolvedSiteId);
-
-    if (!fs.existsSync(baseSiteDir)) {
-      fs.mkdirSync(baseSiteDir, { recursive: true });
-    }
-
-    let targetDir = baseSiteDir;
-    if (resolvedProjId === 'tst') {
-      const subdirs = fs.readdirSync(baseSiteDir).filter(f => fs.statSync(path.join(baseSiteDir, f)).isDirectory());
-      const prefix = filename.split('_')[0];
-      const matchedSubdir = subdirs.find(sd => {
-        const sdPath = path.join(baseSiteDir, sd);
-        return fs.readdirSync(sdPath).some(f => f.startsWith(prefix));
-      });
-
-      if (matchedSubdir) {
-        targetDir = path.join(baseSiteDir, matchedSubdir);
-      } else {
-        const match = filename.match(/TST-(\d+)/);
-        let subFolder = 'LC_01';
-        if (match) {
-          const num = parseInt(match[1], 10);
-          if (num === 10) subFolder = 'LC_01';
-          else if (num === 11) subFolder = 'LC_02';
-          else if (num === 12) subFolder = 'LC_03';
-          else if (num === 9) subFolder = 'LI_01';
-          else if (num === 13) subFolder = 'LI_02';
-          else if (num === 14) subFolder = 'LI_03';
-          else if (num === 15) subFolder = 'LI_04';
-        }
-        targetDir = path.join(baseSiteDir, subFolder);
-        if (!fs.existsSync(targetDir)) {
-          fs.mkdirSync(targetDir, { recursive: true });
-        }
-      }
-    }
-
-    const filePath = path.join(targetDir, filename);
-    fs.writeFileSync(filePath, content, 'utf8');
+    // Trigger full rebuild of data.json to ensure accurate data
+    await rebuildDataJson(projectId);
 
     res.json({ success: true, message: 'File written successfully.' });
   } catch (err) {
@@ -127,38 +163,16 @@ app.post('/api/upload-file', (req, res) => {
   }
 });
 
-// 4. List Files inside Site
-app.post('/api/list-files', (req, res) => {
+// 4. List Files
+app.post('/api/list-files', async (req, res) => {
   try {
     const { projectId, siteId } = req.body;
     if (!projectId || !siteId) throw new Error('Missing parameters');
-
-    const resolvedProjId = projectId === 'tst-lantana' ? 'tst' : projectId;
-    const resolvedSiteId = projectId === 'tst-lantana' ? siteId.toUpperCase() : siteId;
-
-    const siteDir = resolvedProjId === 'tst'
-      ? path.join(rootDir, 'dashboard', 'tst', 'data', 'DATA', resolvedSiteId)
-      : path.join(rootDir, 'dashboard', resolvedProjId, 'data', resolvedSiteId);
-
-    let files = [];
-    if (fs.existsSync(siteDir)) {
-      const getFilesRecursively = (dir) => {
-        let results = [];
-        fs.readdirSync(dir).forEach((file) => {
-          const filePath = path.join(dir, file);
-          if (fs.statSync(filePath).isDirectory()) {
-            getFilesRecursively(filePath).forEach((sf) => {
-              results.push(path.join(file, sf).replace(/\\/g, '/'));
-            });
-          } else {
-            results.push(file);
-          }
-        });
-        return results;
-      };
-      files = getFilesRecursively(siteDir);
-    }
-
+    
+    const { data, error } = await supabase.storage.from('observatory-data').list(`${projectId}/${siteId}`);
+    if (error) throw error;
+    
+    const files = (data || []).filter(f => f.name !== '.emptyFolderPlaceholder').map(f => f.name);
     res.json({ success: true, files });
   } catch (err) {
     res.status(500).json({ success: false, error: err.message });
@@ -166,22 +180,17 @@ app.post('/api/list-files', (req, res) => {
 });
 
 // 5. Delete File
-app.post('/api/delete-file', (req, res) => {
+app.post('/api/delete-file', async (req, res) => {
   try {
     const { projectId, siteId, filename } = req.body;
     if (!projectId || !siteId || !filename) throw new Error('Missing parameters');
+    
+    const storagePath = `${projectId}/${siteId}/${filename}`;
+    const { error } = await supabase.storage.from('observatory-data').remove([storagePath]);
+    if (error) throw error;
 
-    const resolvedProjId = projectId === 'tst-lantana' ? 'tst' : projectId;
-    const resolvedSiteId = projectId === 'tst-lantana' ? siteId.toUpperCase() : siteId;
-
-    const baseDir = resolvedProjId === 'tst'
-      ? path.join(rootDir, 'dashboard', 'tst', 'data', 'DATA', resolvedSiteId)
-      : path.join(rootDir, 'dashboard', resolvedProjId, 'data', resolvedSiteId);
-
-    const filePath = path.join(baseDir, filename);
-    if (fs.existsSync(filePath)) {
-      fs.unlinkSync(filePath);
-    }
+    // Trigger full rebuild of data.json after deletion
+    await rebuildDataJson(projectId);
 
     res.json({ success: true, message: 'File deleted.' });
   } catch (err) {
@@ -189,180 +198,9 @@ app.post('/api/delete-file', (req, res) => {
   }
 });
 
-// 6. Get Dashboard Data
-app.post('/api/get-dashboard-data', (req, res) => {
-  try {
-    const { projectId } = req.body;
-    if (!projectId) throw new Error('Missing projectId');
-
-    const resolvedProjId = projectId === 'tst-lantana' ? 'tst' : projectId;
-    const projectDataDir = path.join(rootDir, 'dashboard', resolvedProjId, 'data');
-
-    // Return pre-generated data.json if it exists (for TST mainly)
-    if (resolvedProjId === 'tst') {
-      const dataFilePath = path.join(projectDataDir, 'data.json');
-      if (fs.existsSync(dataFilePath)) {
-        return res.json(JSON.parse(fs.readFileSync(dataFilePath, 'utf8')));
-      }
-    }
-
-    // Process fresh data from CSVs
-    const defaultPath = path.join(rootDir, 'dashboard', 'tst', 'data', 'data.json');
-    let defaultData = { species_metadata: {}, species_list: [] };
-    if (fs.existsSync(defaultPath)) {
-      defaultData = JSON.parse(fs.readFileSync(defaultPath, 'utf8'));
-    }
-    const speciesMetadata = { ...defaultData.species_metadata };
-    const speciesList = [ ...defaultData.species_list ];
-
-    const allFiles = [];
-    if (fs.existsSync(projectDataDir)) {
-      const scanFiles = (dir) => {
-        fs.readdirSync(dir).forEach(file => {
-          const fp = path.join(dir, file);
-          if (fs.statSync(fp).isDirectory()) {
-            scanFiles(fp);
-          } else if (file !== 'data.json' && (file.endsWith('.csv') || file.endsWith('.txt'))) {
-            allFiles.push(fp);
-          }
-        });
-      };
-      scanFiles(projectDataDir);
-    }
-
-    const recordersList = [];
-    const recorderToIdx = {};
-    const rawDetections = [];
-    const activeRecorders = new Set();
-    let baseDate = new Date(2026, 1, 11);
-    let baseDateAssigned = false;
-
-    const filesMeta = [];
-    allFiles.forEach(fp => {
-      const rel = path.relative(projectDataDir, fp).replace(/\\/g, '/');
-      const parts = path.basename(fp).split('_');
-      let fileDate = null;
-      let hour = 0;
-
-      if (parts.length >= 3) {
-        const dateStr = parts[1];
-        const timeStr = parts[2];
-        if (dateStr.length === 8) {
-          const y = parseInt(dateStr.substring(0, 4), 10);
-          const m = parseInt(dateStr.substring(4, 6), 10) - 1;
-          const d = parseInt(dateStr.substring(6, 8), 10);
-          fileDate = new Date(y, m, d);
-        }
-        if (timeStr.length >= 2) {
-          hour = parseInt(timeStr.substring(0, 2), 10);
-        }
-      }
-
-      if (fileDate && (!baseDateAssigned || fileDate < baseDate)) {
-        baseDate = fileDate;
-        baseDateAssigned = true;
-      }
-
-      const dirParts = path.dirname(rel).split('/');
-      const siteGroup = dirParts[0] || 'SITE';
-      const recId = dirParts[1] || siteGroup;
-
-      filesMeta.push({ filePath: fp, rel, siteGroup, recId, fileDate, hour });
-    });
-
-    filesMeta.forEach(fm => {
-      const content = fs.readFileSync(fm.filePath, 'utf8');
-      const isTab = fm.filePath.endsWith('.txt');
-      const rkey = `${fm.siteGroup}/${fm.recId}`;
-      activeRecorders.add(rkey);
-
-      const lines = content.split(/\r?\n/);
-      if (lines.length < 2) return;
-
-      const delimiter = isTab ? '\t' : ',';
-      const headers = lines[0].split(delimiter).map(h => h.trim().replace(/^"|"$/g, ''));
-      const commonNameIdx = headers.findIndex(h => h.toLowerCase() === 'common name' || h.toLowerCase() === 'common_name');
-      const sciNameIdx = headers.findIndex(h => h.toLowerCase() === 'scientific name' || h.toLowerCase() === 'scientific_name' || h.toLowerCase() === 'species');
-      const confIdx = headers.findIndex(h => h.toLowerCase() === 'confidence');
-
-      for (let i = 1; i < lines.length; i++) {
-        const line = lines[i].trim();
-        if (!line) continue;
-
-        let cols = [];
-        if (isTab) {
-          cols = line.split('\t').map(c => c.trim().replace(/^"|"$/g, ''));
-        } else {
-          let insideQuote = false, entry = '';
-          for (let j = 0; j < line.length; j++) {
-            const char = line[j];
-            if (char === '"') insideQuote = !insideQuote;
-            else if (char === ',' && !insideQuote) { cols.push(entry.trim().replace(/^"|"$/g, '')); entry = ''; }
-            else entry += char;
-          }
-          cols.push(entry.trim().replace(/^"|"$/g, ''));
-        }
-
-        if (cols.length < Math.max(commonNameIdx, sciNameIdx, confIdx) + 1) continue;
-
-        const commonName = commonNameIdx !== -1 ? cols[commonNameIdx] : '';
-        const scientificName = sciNameIdx !== -1 ? cols[sciNameIdx] : '';
-        const confidence = confIdx !== -1 ? parseFloat(cols[confIdx]) : 0;
-
-        if (commonName && !isNaN(confidence) && confidence >= 0.1 && commonName.toLowerCase() !== 'common crane') {
-          let spIdx = speciesList.indexOf(commonName);
-          if (spIdx === -1) {
-            speciesList.push(commonName);
-            spIdx = speciesList.length - 1;
-            speciesMetadata[commonName] = {
-              scientific: scientificName, endemic: 'No', preferred_habitat: 'Unknown',
-              guild: 'Unknown', vocal_activity: 'Unknown', iucn: 'LC', foraging_stratum: 'Unknown',
-              indicator_group: 'Nil', image: '', audio: ''
-            };
-          }
-
-          const dateOffset = fm.fileDate ? Math.round((fm.fileDate.getTime() - baseDate.getTime()) / (1000 * 60 * 60 * 24)) : 0;
-          rawDetections.push({ recKey: rkey, spIdx, dateOffset, hour: fm.hour, conf: confidence });
-        }
-      }
-    });
-
-    const orderedRecKeys = Array.from(activeRecorders).sort();
-    orderedRecKeys.forEach((rkey, idx) => {
-      recorderToIdx[rkey] = idx;
-      const [siteGroup, recId] = rkey.split('/');
-      const actualFiles = filesMeta.filter(fm => fm.siteGroup === siteGroup && fm.recId === recId).length;
-
-      recordersList.push({
-        site_group: siteGroup, recorder_id: recId,
-        habitat: recId.startsWith('LI') ? 'LI' : 'LC',
-        latitude: null, longitude: null, size_gb: null, expected_files: null, actual_files: actualFiles
-      });
-    });
-
-    const compressedDetections = [];
-    rawDetections.forEach(det => {
-      const rIdx = recorderToIdx[det.recKey];
-      if (rIdx !== undefined) {
-        compressedDetections.push([rIdx, det.spIdx, det.dateOffset, det.hour, Math.round(det.conf * 100)]);
-      }
-    });
-
-    const pad = n => n < 10 ? '0' + n : n;
-    const baseDateStr = `${baseDate.getFullYear()}-${pad(baseDate.getMonth() + 1)}-${pad(baseDate.getDate())}`;
-
-    const compiledJson = {
-      base_date: baseDateStr, recorders: recordersList,
-      species_list: speciesList, species_metadata: speciesMetadata, detections: compressedDetections
-    };
-
-    if (!fs.existsSync(projectDataDir)) fs.mkdirSync(projectDataDir, { recursive: true });
-    fs.writeFileSync(path.join(projectDataDir, 'data.json'), JSON.stringify(compiledJson), 'utf8');
-
-    res.json(compiledJson);
-  } catch (err) {
-    res.status(500).json({ success: false, error: err.message });
-  }
+// 6. Get Dashboard Data - (Deprecated, frontend fetches directly from Supabase CDN now)
+app.post('/api/get-dashboard-data', async (req, res) => {
+  res.json({ success: true, message: 'Deprecated. Fetch data.json from Supabase CDN.' });
 });
 
 // Serve frontend static files in production
@@ -374,7 +212,6 @@ if (fs.existsSync(distPath)) {
   });
 }
 
-// Start server
 app.listen(PORT, () => {
   console.log(`Backend server running on port ${PORT}`);
 });

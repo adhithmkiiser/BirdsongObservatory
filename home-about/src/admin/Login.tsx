@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, ShieldCheck, KeyRound, AlertCircle, ArrowLeft } from 'lucide-react';
+import { supabase } from '../supabaseClient';
 
 interface LoginProps {
   onLoginSuccess: (user: any) => void;
@@ -22,42 +23,40 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [simulatedOtpText, setSimulatedOtpText] = useState('');
 
-  // Helper: Get users list from localStorage
-  const getUsersList = () => {
-    const defaultUsers = [
-      { username: 'admin', email: 'admin@iiser.ac.in', password: 'iiser123', role: 'admin', tempPassword: false },
-      { username: 'manager_tst', email: 'tst_manager@iiser.ac.in', password: 'tst123', role: 'manager_project', targetProject: 'tst-lantana', tempPassword: false },
-      { username: 'manager_nilgiri', email: 'nilgiri_manager@iiser.ac.in', password: 'nilgiri123', role: 'manager_site', targetProject: 'nilgiri-project', targetSite: 'site_1', tempPassword: false }
-    ];
-    const stored = localStorage.getItem('userAccounts');
-    if (stored) return JSON.parse(stored);
-    return defaultUsers;
-  };
-
-  // Helper: Save users list to localStorage
-  const saveUsersList = (list: any[]) => {
-    localStorage.setItem('userAccounts', JSON.stringify(list));
-  };
-
-  const handleLoginSubmit = (e: React.FormEvent) => {
+  const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
     setSuccess('');
 
-    const users = getUsersList();
-    const matchedUser = users.find(
-      (u: any) => u.username === username.trim() && u.password === password
-    );
+    try {
+      const { data, error: sbError } = await supabase
+        .from('user_accounts')
+        .select('*')
+        .eq('username', username.trim())
+        .eq('password', password)
+        .maybeSingle();
 
-    if (matchedUser) {
+      if (sbError || !data) {
+        setError('Invalid username or password. Please verify credentials.');
+        return;
+      }
+
+      // Map snake_case columns back to camelCase for the frontend
+      const matchedUser = {
+        username: data.username,
+        role: data.role,
+        targetProject: data.target_project,
+        targetSite: data.target_site,
+        tempPassword: data.temp_password,
+        email: data.username + '@iiser.ac.in'
+      };
+
       if (matchedUser.tempPassword) {
-        // Force password reset first time
         setResetUser(matchedUser);
         const code = Math.floor(100000 + Math.random() * 900000);
         setSimulatedOtpText(`[SIMULATED EMAIL SYSTEM] To: ${matchedUser.email} - Verification OTP is ${code}`);
         setView('temp_reset');
       } else {
-        // Normal sign-in
         localStorage.setItem('currentUser', JSON.stringify(matchedUser));
         onLoginSuccess(matchedUser);
         if (matchedUser.role === 'admin') {
@@ -66,13 +65,12 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
           window.location.hash = '#/manager';
         }
       }
-    } else {
-      setError('Invalid username or password. Please verify credentials.');
+    } catch (err: any) {
+      setError('Database connection error. Please try again later.');
     }
   };
 
-  // Handler: Change Temporary Password
-  const handleTempResetSubmit = (e: React.FormEvent) => {
+  const handleTempResetSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -86,52 +84,66 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
       return;
     }
 
-    // Update user in DB
-    const users = getUsersList();
-    const updated = users.map((u: any) => {
-      if (u.username === resetUser.username) {
-        return { ...u, password: newPassword, tempPassword: false };
+    try {
+      const { data, error: sbError } = await supabase
+        .from('user_accounts')
+        .update({ password: newPassword, temp_password: false })
+        .eq('username', resetUser.username)
+        .select()
+        .single();
+
+      if (sbError || !data) {
+        setError('Failed to update password.');
+        return;
       }
-      return u;
-    });
 
-    saveUsersList(updated);
-    
-    // Log the user in
-    const loggedUser = updated.find((u: any) => u.username === resetUser.username);
-    localStorage.setItem('currentUser', JSON.stringify(loggedUser));
-    onLoginSuccess(loggedUser);
+      const loggedUser = {
+        username: data.username,
+        role: data.role,
+        targetProject: data.target_project,
+        targetSite: data.target_site,
+        tempPassword: data.temp_password
+      };
 
-    setSuccess('Temporary password changed successfully!');
-    if (loggedUser.role === 'admin') {
-      window.location.hash = '#/admin';
-    } else {
-      window.location.hash = '#/manager';
+      localStorage.setItem('currentUser', JSON.stringify(loggedUser));
+      onLoginSuccess(loggedUser);
+
+      setSuccess('Temporary password changed successfully!');
+      if (loggedUser.role === 'admin') {
+        window.location.hash = '#/admin';
+      } else {
+        window.location.hash = '#/manager';
+      }
+    } catch(err) {
+      setError('Database error.');
     }
   };
 
-  // Handler: Forgot Password Request (triggers OTP simulation)
-  const handleForgotRequestSubmit = (e: React.FormEvent) => {
+  const handleForgotRequestSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
-    const users = getUsersList();
-    const matched = users.find(
-      (u: any) => u.username === emailInput.trim() || u.email === emailInput.trim()
-    );
+    try {
+      const { data, error: sbError } = await supabase
+        .from('user_accounts')
+        .select('*')
+        .eq('username', emailInput.trim())
+        .maybeSingle();
 
-    if (matched) {
-      setResetUser(matched);
-      const code = Math.floor(100000 + Math.random() * 900000);
-      setSimulatedOtpText(`[SIMULATED EMAIL SYSTEM] To: ${matched.email} - Reset password OTP verification code is ${code}`);
-      setView('forgot_reset');
-    } else {
-      setError('No registered account found with that username or email.');
+      if (data) {
+        setResetUser(data);
+        const code = Math.floor(100000 + Math.random() * 900000);
+        setSimulatedOtpText(`[SIMULATED EMAIL SYSTEM] To: ${data.username}@iiser.ac.in - Reset password OTP verification code is ${code}`);
+        setView('forgot_reset');
+      } else {
+        setError('No registered account found with that username.');
+      }
+    } catch(err) {
+      setError('Database error.');
     }
   };
 
-  // Handler: OTP reset confirmation
-  const handleForgotResetSubmit = (e: React.FormEvent) => {
+  const handleForgotResetSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
 
@@ -140,22 +152,26 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess }) => {
       return;
     }
 
-    // Update DB
-    const users = getUsersList();
-    const updated = users.map((u: any) => {
-      if (u.username === resetUser.username) {
-        return { ...u, password: newPassword, tempPassword: false };
-      }
-      return u;
-    });
+    try {
+      const { error: sbError } = await supabase
+        .from('user_accounts')
+        .update({ password: newPassword, temp_password: false })
+        .eq('username', resetUser.username);
 
-    saveUsersList(updated);
-    setSuccess('Password reset successfully! Please sign in using your new credentials.');
-    setView('login');
-    setUsername(resetUser.username);
-    setPassword('');
-    setResetUser(null);
-    setSimulatedOtpText('');
+      if (sbError) {
+        setError('Failed to reset password.');
+        return;
+      }
+
+      setSuccess('Password reset successfully! Please sign in using your new credentials.');
+      setView('login');
+      setUsername(resetUser.username);
+      setPassword('');
+      setResetUser(null);
+      setSimulatedOtpText('');
+    } catch(err) {
+      setError('Database error.');
+    }
   };
 
   return (

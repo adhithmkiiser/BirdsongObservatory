@@ -3,6 +3,7 @@ import { MapContainer, TileLayer, Marker, Popup, Tooltip, useMap, CircleMarker }
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { Search, Download, BarChart3, ClipboardList } from 'lucide-react';
+import { supabase } from '../supabaseClient';
 
 interface Site {
   id: string;
@@ -36,6 +37,7 @@ const ChangeView: React.FC<{ center: [number, number]; zoom: number }> = ({ cent
 const CommonDashboard: React.FC<CommonDashboardProps> = ({ projectId, hideHero = false }) => {
   const [data, setData] = useState<any>(null);
   const [sites, setSites] = useState<Site[]>([]);
+  const [siteSettings, setSiteSettings] = useState<any[]>([]);
   const [selectedSite, setSelectedSite] = useState<string>('All');
   const [confidenceThreshold, setConfidenceThreshold] = useState<number>(0.70);
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -93,37 +95,83 @@ const CommonDashboard: React.FC<CommonDashboardProps> = ({ projectId, hideHero =
     setShowExplorerDropdown(false);
   };
 
-  // Load project sites list from LocalStorage
+  // Load project sites list from Supabase
   useEffect(() => {
-    const savedSites = localStorage.getItem('sites');
-    if (savedSites) {
-      const allSites = JSON.parse(savedSites);
-      // Filter sites belonging to this project
-      const projectSites = allSites.filter((s: any) => s.projectId === projectId);
-      setSites(projectSites);
-    }
+    const fetchSites = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('sites')
+          .select('*')
+          .eq('project_id', projectId);
+
+        if (!error && data) {
+          // Map database snake_case to frontend camelCase
+          const mappedSites = data.map(s => ({
+            id: s.id,
+            projectId: s.project_id,
+            name: s.name,
+            elevation: s.elevation,
+            status: s.status,
+            latitude: s.latitude,
+            longitude: s.longitude
+          }));
+          setSites(mappedSites);
+        }
+      } catch (err) {
+        console.error('Error fetching sites:', err);
+      }
+    };
+    fetchSites();
   }, [projectId]);
 
-  // Load compiled data from API
+  // Load compiled data from Supabase Storage
   useEffect(() => {
-    setLoading(true);
-    fetch('/api/get-dashboard-data', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ projectId })
-    })
-      .then(res => res.json())
-      .then((json: any) => {
+    const fetchDashboardData = async () => {
+      setLoading(true);
+      try {
+        const { data: fileData, error } = await supabase
+          .storage
+          .from('observatory-data')
+          .download(`${projectId}/data.json`);
+
+        if (error || !fileData) {
+          console.error('Failed to load project dashboard data from Supabase:', error);
+          setLoading(false);
+          return;
+        }
+
+        const text = await fileData.text();
+        const json = JSON.parse(text);
         setData(json);
+      } catch (err) {
+        console.error('Error fetching dashboard data:', err);
+      } finally {
         setLoading(false);
-      })
-      .catch(err => {
-        console.error('Failed to load project dashboard data:', err);
-        setLoading(false);
-      });
+      }
+    };
+    fetchDashboardData();
   }, [projectId]);
 
-  // Recorders data list derived from fetched data and merged with LocalStorage metadata
+  // Load site settings (visibility toggles) from Supabase
+  useEffect(() => {
+    const fetchSettings = async () => {
+      try {
+        const { data, error } = await supabase
+          .from('site_settings')
+          .select('*')
+          .eq('project_id', projectId);
+
+        if (!error && data) {
+          setSiteSettings(data);
+        }
+      } catch (err) {
+        console.error('Error fetching site settings:', err);
+      }
+    };
+    fetchSettings();
+  }, [projectId]);
+
+  // Recorders data list derived from fetched data and merged with Supabase metadata
   const recorders = useMemo(() => {
     // Start with API recorders (sites that have uploaded BirdNET data)
     const apiRecorders = (data?.recorders ?? []).map((r: any) => {
@@ -274,12 +322,13 @@ const CommonDashboard: React.FC<CommonDashboardProps> = ({ projectId, hideHero =
 
   // Map settings
   const mapCenterInfo = useMemo(() => {
-    const validRecs = recorders.filter((r: any) => 
-      r.latitude !== null && 
-      r.longitude !== null && 
-      !isNaN(r.latitude) && 
-      !isNaN(r.longitude)
-    );
+    const validRecs = recorders.filter((r: any) => {
+      if (r.latitude === null || r.longitude === null || isNaN(r.latitude) || isNaN(r.longitude)) return false;
+      const setting = siteSettings.find(s => s.site_id === r.site_group);
+      if (setting && setting.hide_map) return false;
+      return true;
+    });
+
     if (validRecs.length > 0) {
       const sumLat = validRecs.reduce((sum: number, r: any) => sum + r.latitude, 0);
       const sumLng = validRecs.reduce((sum: number, r: any) => sum + r.longitude, 0);
@@ -289,7 +338,7 @@ const CommonDashboard: React.FC<CommonDashboardProps> = ({ projectId, hideHero =
       return { center: [lat, lng] as [number, number], zoom };
     }
     return { center: [11.0, 76.9] as [number, number], zoom: 8.5 };
-  }, [recorders, selectedSite]);
+  }, [recorders, selectedSite, siteSettings]);
 
   // Create custom Leaflet pin icon: Blue/Indigo for active, Grey for inactive
   const createPinIcon = (active: boolean) => {
@@ -563,12 +612,12 @@ const CommonDashboard: React.FC<CommonDashboardProps> = ({ projectId, hideHero =
                 url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
               />
               {recorders
-                .filter((r: any) => 
-                  r.latitude !== null && 
-                  r.longitude !== null && 
-                  !isNaN(r.latitude) && 
-                  !isNaN(r.longitude)
-                )
+                .filter((r: any) => {
+                  if (r.latitude === null || r.longitude === null || isNaN(r.latitude) || isNaN(r.longitude)) return false;
+                  const setting = siteSettings.find(s => s.site_id === r.site_group);
+                  if (setting && setting.hide_map) return false;
+                  return true;
+                })
                 .map((rec: any) => {
                   const richness = richnessBySite[rec.name] || 0;
                   const isActive = rec.actual_files > 0;
