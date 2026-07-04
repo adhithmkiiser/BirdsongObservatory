@@ -1,3 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	135.0	138.0	0	12000	Red-whiskered Bulbul	rewbul	0.1586	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260131_161500.wav	135.0
-2	Spectrogram 1	1	147.0	150.0	0	12000	Eurasian Collared-Dove	eucdov	0.1534	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260131_161500.wav	147.0

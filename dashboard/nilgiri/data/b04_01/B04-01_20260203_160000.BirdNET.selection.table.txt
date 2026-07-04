@@ -1,3 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	204.0	207.0	0	12000	Green-winged Teal	gnwtea	0.2648	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260203_160000.wav	204.0
-2	Spectrogram 1	1	261.0	264.0	0	12000	Dunlin	dunlin	0.1195	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260203_160000.wav	261.0

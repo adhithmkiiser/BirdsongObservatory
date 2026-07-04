@@ -1,6 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	270.0	273.0	0	12000	Greater Coucal	grecou1	0.5300	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_180000.wav	270.0
-2	Spectrogram 1	1	273.0	276.0	0	12000	Greater Coucal	grecou1	0.9369	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_180000.wav	273.0
-3	Spectrogram 1	1	276.0	279.0	0	12000	Greater Coucal	grecou1	0.8483	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_180000.wav	276.0
-4	Spectrogram 1	1	279.0	282.0	0	12000	Greater Coucal	grecou1	0.9580	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_180000.wav	279.0
-5	Spectrogram 1	1	282.0	285.0	0	12000	Greater Coucal	grecou1	0.9538	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_180000.wav	282.0

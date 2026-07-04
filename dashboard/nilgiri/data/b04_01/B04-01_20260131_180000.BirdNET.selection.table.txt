@@ -1,2 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	126.0	129.0	0	12000	Large-billed Crow	labcro1	0.1069	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260131_180000.wav	126.0

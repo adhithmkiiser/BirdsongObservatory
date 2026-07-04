@@ -1,4 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	6.0	9.0	0	12000	Common Crane	comcra	0.1299	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_164500.wav	6.0
-2	Spectrogram 1	1	105.0	108.0	0	12000	Green Warbler	grnwar1	0.1215	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_164500.wav	105.0
-3	Spectrogram 1	1	228.0	231.0	0	12000	Coppersmith Barbet	copbar1	0.2927	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_164500.wav	228.0

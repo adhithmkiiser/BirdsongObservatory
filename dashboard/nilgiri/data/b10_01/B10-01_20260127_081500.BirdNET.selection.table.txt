@@ -1,2 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	264.0	267.0	0	12000	Yellow-browed Bulbul	yebbul3	0.2655	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_081500.wav	264.0

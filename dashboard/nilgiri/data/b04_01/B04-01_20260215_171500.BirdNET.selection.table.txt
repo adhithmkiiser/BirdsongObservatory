@@ -1,7 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	27.0	30.0	0	12000	Whimbrel	whimbr	0.1924	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_171500.wav	27.0
-2	Spectrogram 1	1	51.0	54.0	0	12000	Ruddy Shelduck	rudshe	0.3284	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_171500.wav	51.0
-3	Spectrogram 1	1	102.0	105.0	0	12000	Red-whiskered Bulbul	rewbul	0.1067	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_171500.wav	102.0
-4	Spectrogram 1	1	138.0	141.0	0	12000	Red-whiskered Bulbul	rewbul	0.4634	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_171500.wav	138.0
-5	Spectrogram 1	1	240.0	243.0	0	12000	Golden-fronted Leafbird	goflea1	0.1856	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_171500.wav	240.0
-6	Spectrogram 1	1	297.0	300.0	0	12000	Red-whiskered Bulbul	rewbul	0.1403	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260215_171500.wav	297.0

@@ -1,2 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	0	3	0	12000	nocall	nocall	1.0	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260125_061500.wav	0

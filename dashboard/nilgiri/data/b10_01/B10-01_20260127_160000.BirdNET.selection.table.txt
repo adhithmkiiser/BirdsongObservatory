@@ -1,5 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	18.0	21.0	0	12000	Indian Pitta	indpit1	0.1046	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_160000.wav	18.0
-2	Spectrogram 1	1	96.0	99.0	0	12000	Indian White-eye	indwhe1	0.1707	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_160000.wav	96.0
-3	Spectrogram 1	1	111.0	114.0	0	12000	Indian White-eye	indwhe1	0.6481	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_160000.wav	111.0
-4	Spectrogram 1	1	117.0	120.0	0	12000	Oriental Honey-buzzard	orihob2	0.1201	F:\Nilgiris_rawdata\B10-01\Data\B10-01_20260127_160000.wav	117.0

@@ -1,8 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	87.0	90.0	0	12000	Greater Coucal	grecou1	0.1276	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_183000.wav	87.0
-2	Spectrogram 1	1	90.0	93.0	0	12000	Greater Coucal	grecou1	0.4337	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_183000.wav	90.0
-3	Spectrogram 1	1	198.0	201.0	0	12000	Gray Junglefowl	grejun2	0.5198	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_183000.wav	198.0
-4	Spectrogram 1	1	252.0	255.0	0	12000	Gray Junglefowl	grejun2	0.6253	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_183000.wav	252.0
-5	Spectrogram 1	1	252.0	255.0	0	12000	Jungle Owlet	junowl1	0.1409	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_183000.wav	252.0
-6	Spectrogram 1	1	282.0	285.0	0	12000	Jungle Owlet	junowl1	0.8691	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_183000.wav	282.0
-7	Spectrogram 1	1	282.0	285.0	0	12000	Gray Junglefowl	grejun2	0.2241	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260209_183000.wav	282.0

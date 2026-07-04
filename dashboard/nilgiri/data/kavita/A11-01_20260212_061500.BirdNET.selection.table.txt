@@ -1,6 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	252.0	255.0	0	12000	Indian White-eye	indwhe1	0.5298	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_061500.wav	252.0
-2	Spectrogram 1	1	261.0	264.0	0	12000	Indian White-eye	indwhe1	0.8198	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_061500.wav	261.0
-3	Spectrogram 1	1	270.0	273.0	0	12000	Indian White-eye	indwhe1	0.1792	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_061500.wav	270.0
-4	Spectrogram 1	1	279.0	282.0	0	12000	Indian White-eye	indwhe1	0.1032	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_061500.wav	279.0
-5	Spectrogram 1	1	291.0	294.0	0	12000	Indian White-eye	indwhe1	0.5020	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260212_061500.wav	291.0

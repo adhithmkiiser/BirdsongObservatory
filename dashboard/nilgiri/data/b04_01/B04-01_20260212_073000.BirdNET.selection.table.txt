@@ -1,6 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	57.0	60.0	0	12000	Large-billed Crow	labcro1	0.1744	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_073000.wav	57.0
-2	Spectrogram 1	1	90.0	93.0	0	12000	Red-whiskered Bulbul	rewbul	0.2988	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_073000.wav	90.0
-3	Spectrogram 1	1	105.0	108.0	0	12000	Indian Golden Oriole	ingori1	0.1196	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_073000.wav	105.0
-4	Spectrogram 1	1	273.0	276.0	0	12000	White-cheeked Barbet	whcbar1	0.1354	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_073000.wav	273.0
-5	Spectrogram 1	1	285.0	288.0	0	12000	Short-eared Owl	sheowl	0.1257	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_073000.wav	285.0

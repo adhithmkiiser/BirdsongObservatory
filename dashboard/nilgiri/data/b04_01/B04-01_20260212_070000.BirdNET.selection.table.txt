@@ -1,4 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	69.0	72.0	0	12000	Dunlin	dunlin	0.5344	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_070000.wav	69.0
-2	Spectrogram 1	1	75.0	78.0	0	12000	Dunlin	dunlin	0.2212	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_070000.wav	75.0
-3	Spectrogram 1	1	87.0	90.0	0	12000	Dunlin	dunlin	0.1542	F:\Nilgiris_rawdata\B04-01\Data\B04-01_20260212_070000.wav	87.0

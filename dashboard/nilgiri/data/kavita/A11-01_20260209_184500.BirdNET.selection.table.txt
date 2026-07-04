@@ -1,4 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	72.0	75.0	0	12000	Pied Bushchat	piebus1	0.1860	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260209_184500.wav	72.0
-2	Spectrogram 1	1	78.0	81.0	0	12000	Puff-throated Babbler	putbab1	0.6198	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260209_184500.wav	78.0
-3	Spectrogram 1	1	126.0	129.0	0	12000	Indian Scimitar-Babbler	insbab1	0.1373	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260209_184500.wav	126.0

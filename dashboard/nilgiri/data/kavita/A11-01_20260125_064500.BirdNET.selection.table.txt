@@ -1,8 +1,0 @@
-Selection	View	Channel	Begin Time (s)	End Time (s)	Low Freq (Hz)	High Freq (Hz)	Common Name	Species Code	Confidence	Begin Path	File Offset (s)
-1	Spectrogram 1	1	6.0	9.0	0	12000	Gray Junglefowl	grejun2	0.3286	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_064500.wav	6.0
-2	Spectrogram 1	1	48.0	51.0	0	12000	Gray Junglefowl	grejun2	0.3141	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_064500.wav	48.0
-3	Spectrogram 1	1	117.0	120.0	0	12000	Red-whiskered Bulbul	rewbul	0.1159	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_064500.wav	117.0
-4	Spectrogram 1	1	117.0	120.0	0	12000	Gray Junglefowl	grejun2	0.1143	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_064500.wav	117.0
-5	Spectrogram 1	1	225.0	228.0	0	12000	Gray Junglefowl	grejun2	0.2378	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_064500.wav	225.0
-6	Spectrogram 1	1	264.0	267.0	0	12000	Greenish Warbler	grewar3	0.6889	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_064500.wav	264.0
-7	Spectrogram 1	1	264.0	267.0	0	12000	Green Warbler	grnwar1	0.1066	F:\Nilgiris_rawdata\A11-01\Data\A11-01_20260125_064500.wav	264.0
